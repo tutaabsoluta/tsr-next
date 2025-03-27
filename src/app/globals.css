@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
 
 :root {
   --background: #ffffff;
@@ -19,9 +19,33 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Lato', sans-serif;
+  font-family: --fontvar(--font-lato), sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Merriweather', serif;
+  font-family: var(--font-merriweather), serif;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h5 {
+  font-size: 19px;
+}
+
+p {
+  font-size: 18px;
 }
