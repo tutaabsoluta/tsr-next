@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TSR | Historia",
+  title: "TSR | Servicios",
   description: "Especialistas en soldadura industrial, limpieza láser, alargado de chasis y más.",
   keywords: "soldadura, limpieza láser, soldadura industrial, alargado de chasis, plataformas",
   openGraph: {
-    title: "TSR | Historia",
+    title: "TSR | Servicios",
     description: "Servicios de limpieza láser, alargado de chasis, plataformas y más.",
     siteName:"Taller de Soldadura Rodriguez LTDA",
     type: "website",
@@ -21,10 +21,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HistoryPage() {
+
+export default function ServicesPage() {
   return (
     <div>
-      <h1>Nuestra Historia</h1>
+      <h1>Nuestros Servicios</h1>
     </div>
   );
 }
