@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "TSR | Taller de Soldadura Rodríguez",
   description: "Especialistas en soldadura industrial, limpieza láser, alargado de chasis y más.",
-  keywords: "soldadura, limpieza láser, soldadura industrial, alargado de chasis, plataformas",
+  keywords: "soldadura, limpieza láser, soldadura industrial, alargado de chasis, plataformas, muflas",
   openGraph: {
     title: "TSR | Taller de Soldadura Rodriguez",
     description: "Servicios de limpieza láser, alargado de chasis, plataformas y más.",
