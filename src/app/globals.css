@@ -15,11 +15,24 @@
   }
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: --fontvar(--font-lato), sans-serif;
+  font-family: var(--font-lato), sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,4 +61,10 @@ h5 {
 
 p {
   font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
