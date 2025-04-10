@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/ui/ModeToggle";
 
 
 
@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export function Header() {
   return (
     <header>
-      <Button />
+      <ModeToggle/>
     </header>
   )
 }

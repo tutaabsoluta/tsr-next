@@ -2,17 +2,18 @@ import type { Metadata } from "next";
 import { Lato, Merriweather } from "next/font/google";
 import "./globals.css";
 import { Footer, Header } from "@/components/layouts";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
-  weight: ["400","700"]
+  weight: ["400", "700"]
 });
 
 const merriweather = Merriweather({
   variable: "--font-merriweather",
   subsets: ["latin"],
-  weight: ["400","700"]
+  weight: ["400", "700"]
 });
 
 export const metadata: Metadata = {
@@ -26,13 +27,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-      className={`${lato.variable} ${merriweather.variable}`}
+        className={`${lato.variable} ${merriweather.variable} bg-light-background dark:bg-dark-background`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute='class'
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
