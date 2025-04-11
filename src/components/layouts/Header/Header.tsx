@@ -1,7 +1,8 @@
-'use client'
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { useMobile } from "@/hooks/useMobile";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -46,7 +47,7 @@ export function Header() {
                 size={'icon'}
                 aria-label="Desplegar Menu"
                 className="ml-2"
-                onClick={() => setMobileMenuOpen( !mobileMenuOpen )}
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </Button>
@@ -75,6 +76,26 @@ export function Header() {
 
         </div>
       </div>
+
+      {/* Links in Mobile */}
+
+      { mobileMenuOpen && (
+
+        <div className="container mx-auto px-4 py-6 flex flex-col space-y-4">
+          { navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`text-lg font-medium py-2 ${pathname === item.href ? "text-primary" : "text-muted-foreground"
+                }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      )}
+
     </header>
   )
 }
