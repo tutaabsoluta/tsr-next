@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from "@/components/ui/button";
+import ManualThemeToggle from "@/components/ui/manual-theme-toggle";
 import { useMobile } from "@/hooks/useMobile";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -9,11 +10,11 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Inicio", href: "/" },
+  { label: "Servicios", href: "/services" },
+  { label: "Galería", href: "/gallery" },
+  { label: "Acerca", href: "/about" },
+  { label: "Contacto", href: "/contact" },
 ];
 
 
@@ -59,18 +60,19 @@ export function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`relative text-sm font-medium transition-colors hover:text-blue-500 ${pathname === item.href ? 'text-dark-primary' : 'text-muted-foreground'}`}
+                    className={`relative text-sm font-medium transition-colors hover:text-metallic-patina dark:hover:text-metallic-sparkGold ${pathname === item.href ? 'text-metallic-patina dark:text-metallic-sparkGold' : 'text-muted-foreground text-light-text dark:text-dark-text'}`}
                   >
                     {item.label}
                     {pathname === item.href && (
                       <motion.div
                         layoutId="underline"
-                        className="absolute left-0 right-0 h-0.5 bg-orange-400 bottom-[-5px]"
+                        className="absolute left-0 right-0 h-0.5 bg-metallic-patina dark:bg-metallic-sparkGold bottom-[-5px]"
                       />
                     )}
                   </Link>
                 ))
               }
+              <ManualThemeToggle/>
             </nav>
           }
 
