@@ -23,8 +23,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <section>
-      <h1 className="font-bold dark:text-cyan-400 text-red-400">TSR</h1>
-      <p>Servicios de limpieza láser, alargado de chasis, plataformas y más.</p>
+
     </section>
   );
 }

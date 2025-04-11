@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HistoryPage() {
+export default function AboutPage() {
   return (
     <div>
       <h1>Nuestra Historia</h1>
