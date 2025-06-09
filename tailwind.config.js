@@ -25,14 +25,14 @@ module.exports = {
           "secondary": "#12263D",  // Azul metálico más profundo
           "accent": "#FF914D",  // Naranja más brillante para contraste
           "neutral": "#1E293B",  // Gris metalizado oscuro
-          "background": "#0F172A",  // Fondo azul noche industrial
+          "background": "#0F172A",  // Fondo azul noche industrial 0F172A
           "text": "#E2E8F0"  // Texto claro
         },
         "metallic": {
           "blueSteel": "#0A1A2F",
           "weldingOrange": "#FF7D33",
           "ironGray": "#3A4556",
-          "sparkGold": "#FFB347",  // Opcional: tono dorado para detalles
+          "sparkGold": "#22d3ee",  // Opcional: tono dorado para detalles
           "patina": "#4D9078"  // Opcional: verde pátina para acentos
         }
       },
