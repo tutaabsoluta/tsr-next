@@ -1,4 +1,3 @@
-import Faq from "@/components/faq";
 import Header from "@/components/header";
 import Nosotros from "@/components/nosotros";
 import Services from "@/components/services";
@@ -33,10 +32,9 @@ export default function Home() {
       <Header />
       <Services />
       <Trabajos />
-      {/* <Testimoniales />
+      <Testimoniales />
       <Nosotros />
-      <Faq />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
