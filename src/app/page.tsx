@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import Services from "@/components/services";
 import { Metadata } from "next";
 
 // export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full">
       <Header />
+      <Services />
     </div>
   );
 }
