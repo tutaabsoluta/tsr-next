@@ -1,19 +1,22 @@
+import { Badge } from "./ui/badge";
 
 export default function Services() {
     return (
         <section className="mt-24 px-32 ">
 
-            <div className="text-center">
-                <h2>Nuestros servicios</h2>
-                <p className="text-slate-400">Ofrecemos una amplia gama de servicios de soldadura y fabricación de metales adaptados a sus necesidades específicas.</p>
+            <div>
+                <Badge variant={'default'}>Servicios</Badge>
+                <h2 className="mt-4">Nuestros servicios</h2>
+                <p className="text-slate-400">Ofrecemos una amplia gama de servicios de soldadura y fabricación <br />  de metales adaptados a sus necesidades específicas.</p>
+
             </div>
 
 
             <div className="grid grid-cols-3 place-items-center">
                 {/* Limpieza laser */}
-                <article className="flex flex-col items-center justify-center gap-6 outline outline-2 outline-gray-700 w-80 h-64 rounded-xl mt-12 text-center bg-gray-800">
- 
-                    <div className="bg-gray-700 outline outline-1 rounded-full h-14 w-14 flex items-center justify-center">
+                <article className="flex flex-col items-center justify-center gap-6 outline outline-2 outline-gray-300 w-80 h-64 rounded-xl mt-12 text-center bg-slate-50 dark:bg-gray-800">
+
+                    <div className="bg-gray-500 outline outline-1 rounded-full h-14 w-14 flex items-center justify-center">
                         <img src="laser.svg" alt="" className="w-8 h-8" />
                     </div>
 
@@ -22,9 +25,9 @@ export default function Services() {
                     <p className="text-slate-400">Advanced non-abrasive cleaning technology for metal surfaces</p>
                 </article>
                 {/* Extension chasis */}
-                <article className=" flex flex-col items-center justify-center gap-6 outline outline-2 outline-gray-700 w-80 h-64 rounded-xl mt-12 text-center bg-gray-800">
- 
-                    <div className="bg-gray-700 outline outline-1 rounded-full h-14 w-14 flex items-center justify-center">
+                <article className=" flex flex-col items-center justify-center gap-6 outline outline-2 outline-gray-300 w-80 h-64 rounded-xl mt-12 text-center bg-slate-50 dark:bg-gray-800">
+
+                    <div className="bg-gray-500 outline outline-1 rounded-full h-14 w-14 flex items-center justify-center">
                         <img src="chasis.svg" alt="" className="w-8 h-8" />
                     </div>
 
@@ -34,9 +37,9 @@ export default function Services() {
                 </article>
 
                 {/* Plataformas y carretas */}
-                <article className=" flex flex-col items-center justify-center gap-6 outline outline-2 outline-gray-700 w-80 h-64 rounded-xl mt-12 text-center bg-gray-800">
- 
-                    <div className="bg-gray-700 outline outline-1 rounded-full h-14 w-14 flex items-center justify-center">
+                <article className=" flex flex-col items-center justify-center gap-6 outline outline-2 outline-gray-300 w-80 h-64 rounded-xl mt-12 text-center bg-slate-50 dark:bg-gray-800">
+
+                    <div className="bg-gray-500 outline outline-1 rounded-full h-14 w-14 flex items-center justify-center">
                         <img src="plataforma.svg" alt="" className="w-8 h-8" />
                     </div>
 
@@ -45,9 +48,9 @@ export default function Services() {
                     <p className="text-slate-400">Advanced non-abrasive cleaning technology for metal surfaces</p>
                 </article>
 
-                <article className=" flex flex-col items-center justify-center gap-6 outline outline-2 outline-gray-700 w-80 h-64 rounded-xl mt-12 text-center bg-gray-800">
- 
-                    <div className="bg-gray-700 outline outline-1 rounded-full h-14 w-14 flex items-center justify-center">
+                <article className=" flex flex-col items-center justify-center gap-6 outline outline-2 outline-gray-300 w-80 h-64 rounded-xl mt-12 text-center bg-slate-50 dark:bg-gray-800">
+
+                    <div className="bg-gray-500 outline outline-1 rounded-full h-14 w-14 flex items-center justify-center">
                         <img src="bumper.svg" alt="" className="w-8 h-8" />
                     </div>
 
@@ -56,9 +59,9 @@ export default function Services() {
                     <p className="text-slate-400">Advanced non-abrasive cleaning technology for metal surfaces</p>
                 </article>
 
-                <article className=" flex flex-col items-center justify-center gap-6 outline outline-2 outline-gray-700 w-80 h-64 rounded-xl mt-12 text-center bg-gray-800">
- 
-                    <div className="bg-gray-700 outline outline-1 rounded-full h-14 w-14 flex items-center justify-center">
+                <article className=" flex flex-col items-center justify-center gap-6 outline outline-2 outline-gray-300 w-80 h-64 rounded-xl mt-12 text-center bg-slate-50 dark:bg-gray-800">
+
+                    <div className="bg-gray-500 outline outline-1 rounded-full h-14 w-14 flex items-center justify-center">
                         <img src="mufla.svg" alt="" className="w-8 h-8" />
                     </div>
 
@@ -67,9 +70,9 @@ export default function Services() {
                     <p className="text-slate-400">Advanced non-abrasive cleaning technology for metal surfaces</p>
                 </article>
 
-                <article className=" flex flex-col items-center justify-center gap-6 outline outline-2 outline-gray-700 w-80 h-64 rounded-xl mt-12 text-center bg-gray-800">
- 
-                    <div className="bg-gray-700 outline outline-1 rounded-full h-14 w-14 flex items-center justify-center">
+                <article className=" flex flex-col items-center justify-center gap-6 outline outline-2 outline-gray-300 w-80 h-64 rounded-xl mt-12 text-center bg-slate-50 dark:bg-gray-800">
+
+                    <div className="bg-gray-500 outline outline-1 rounded-full h-14 w-14 flex items-center justify-center">
                         <img src="soldadora.svg" alt="" className="w-8 h-8" />
                     </div>
 
@@ -80,10 +83,10 @@ export default function Services() {
             </div>
 
             <div className="flex items-center justify-center mt-16">
-                <button className="px-12 bg-black py-3 rounded-xl font-bold">Explorar mas sobre nuestros servicios</button>
+                <button className="px-12 bg-metallic-blueSteel py-3 rounded-xl font-bold text-white">Explorar mas sobre nuestros servicios</button>
             </div>
 
-{/* //TODO */}
+            {/* //TODO */}
             {/* <div className="text-center mt-12">
                 <h4>Tambien ofrecemos mantenimiento en camiones, automoviles y equipo industrial</h4>
             </div> */}
