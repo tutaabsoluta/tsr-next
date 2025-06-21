@@ -6,6 +6,7 @@ import { motion, AnimatePresence, useInView } from "framer-motion"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { testimoniales } from "@/lib/data"
+import Badge from "./utils/badge"
 
 export default function Testimoniales() {
   const [current, setCurrent] = useState(0)
@@ -31,14 +32,15 @@ export default function Testimoniales() {
   return (
     <section className="py-20">
       <div ref={ref} className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
+        <div className="mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Lo que dicen nuestros clientes</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <Badge icon={Quote} text="Testimoniales" />
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 mt-4">Lo que dicen nuestros clientes</h2>
+            <p className="max-w-2xl text-slate-400">
               No se fíe solo de nuestras palabras. Esto es lo que nuestros clientes opinan sobre nuestros servicios
             </p>
           </motion.div>

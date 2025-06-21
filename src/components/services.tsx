@@ -1,11 +1,12 @@
-import { Badge } from "./ui/badge";
+import { Wrench } from "lucide-react";
+import Badge from "./utils/badge";
 
 export default function Services() {
     return (
-        <section className="mt-24 px-32 ">
+        <section className="mt-24 container mx-auto">
 
             <div>
-                <Badge variant={'default'}>Servicios</Badge>
+                <Badge icon={Wrench} text="Servicios" /> 
                 <h2 className="mt-4">Nuestros servicios</h2>
                 <p className="text-slate-400">Ofrecemos una amplia gama de servicios de soldadura y fabricación <br />  de metales adaptados a sus necesidades específicas.</p>
 

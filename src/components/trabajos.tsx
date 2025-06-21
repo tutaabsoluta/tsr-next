@@ -2,10 +2,11 @@
 
 import { useCallback, useEffect, useRef, useState } from "react"
 import useEmblaCarousel from "embla-carousel-react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, Hammer } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import Badge from "./utils/badge"
 
 const jobsData = [
   {
@@ -151,18 +152,19 @@ export default function OurJobs() {
 
   return (
     <section className="py-24 bg-gradient-to-br from-background via-secondary/5 to-background">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
+      <div className="container mx-auto">
+        <div className="mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-bold tracking-tight mb-6 bg-gradient-to-r from-cyan-200 to-cyan-400 bg-clip-text text-transparent">
+            <Badge icon={Hammer} text="Trabajos" />
+            <h2 className="font-bold tracking-tight mt-4">
               Trabajos que generan confianza
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-400 max-w-3xl leading-relaxed">
               Explora algunos de nuestros trabajos donde mostramos nuestra expertiz en soldadura e ingenieria industrial
             </p>
           </motion.div>

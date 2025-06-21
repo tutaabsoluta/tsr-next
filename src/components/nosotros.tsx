@@ -6,35 +6,37 @@
 import { useRef, useState, useEffect } from "react"
 import Image from "next/image"
 import { motion, useInView } from "framer-motion"
+import Badge from "./utils/badge"
+import { Users } from "lucide-react"
 
 const stats = [
   {
     id: 1,
-    value: 12,
-    label: "Years of Experience",
+    value: 40,
+    label: "Años de experiencia",
     suffix: "+",
-    description: "of precision welding and metal fabrication excellence",
+    description: "de soldadura de precision y fabricacion de metales.",
   },
   {
     id: 2,
-    value: 500,
-    label: "Projects Completed",
+    value: 9000,
+    label: "Trabajos Completados",
     suffix: "+",
-    description: "successfully delivered with outstanding quality",
+    description: "entregados a nuestros clientes de forma exitosa.",
   },
   {
     id: 3,
-    value: 50,
-    label: "Skilled Craftsmen",
+    value: 150,
+    label: "Empresas Atendidas",
     suffix: "+",
-    description: "dedicated professionals committed to excellence",
+    description: "del sector industrial, construcción y más",
   },
   {
     id: 4,
     value: 100,
-    label: "Client Satisfaction",
+    label: "Satisfaccion de Clientes",
     suffix: "%",
-    description: "reflects our commitment to quality service",
+    description: "que refleja nuestro compromiso con el servicio de calidad.",
   },
 ]
 
@@ -76,14 +78,14 @@ export default function Nosotros() {
   }, [isInView])
 
   return (
-    <section className="py-24 bg-gradient-to-br from-muted/30 via-background to-muted/20">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="py-24">
+      <div className="container mx-auto">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.8 }}
-          className="bg-card/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border border-border/50"
+          // className="bg-metallic-patina/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border border-border/50"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -94,7 +96,7 @@ export default function Nosotros() {
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  <span className="text-sm font-medium text-primary uppercase tracking-wider">About us</span>
+                  <Badge icon={Users} text="Nosotros" />
                 </motion.div>
 
                 <motion.h2
@@ -103,17 +105,16 @@ export default function Nosotros() {
                   transition={{ duration: 0.6, delay: 0.3 }}
                   className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight"
                 >
-                  Our Welding Workshop Journey
+                  Nuestro Viaje en el Taller de Soldadura
                 </motion.h2>
 
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
-                  className="text-muted-foreground text-lg leading-relaxed"
+                  className="text-gray-400 text-lg leading-relaxed"
                 >
-                  Founded with a passion for precision metalwork, our workshop has grown from humble beginnings to
-                  become a trusted name in welding and fabrication services.
+                  Fundado con una pasión por el trabajo de metal de precisión, nuestro taller ha crecido desde sus humildes comienzos hasta convertirse en un nombre confiable en servicios de soldadura y fabricación.
                 </motion.p>
               </div>
 
