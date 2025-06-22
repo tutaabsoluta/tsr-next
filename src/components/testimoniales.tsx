@@ -6,7 +6,7 @@ import { motion, AnimatePresence, useInView } from "framer-motion"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { testimoniales } from "@/lib/data"
-import Badge from "./utils/badge"
+import Badge from "./badge"
 
 export default function Testimoniales() {
   const [current, setCurrent] = useState(0)

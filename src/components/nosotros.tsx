@@ -6,7 +6,7 @@
 import { useRef, useState, useEffect } from "react"
 import Image from "next/image"
 import { motion, useInView } from "framer-motion"
-import Badge from "./utils/badge"
+import Badge from "./badge"
 import { Users } from "lucide-react"
 
 const stats = [

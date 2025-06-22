@@ -5,27 +5,26 @@ interface ServiceCardProps {
     description: string
 }
 
-export default function ServiceCard({  heading, description }: ServiceCardProps) {
+export default function ServiceCard({ heading, description }: ServiceCardProps) {
     return (
-        <div className="p-[1px] rounded-xl bg-gradient-to-br from-slate-600/80 via-slate-800/60 to-slate-500/80 dark:from-cyan-600/80 dark:via-cyan-800/60 dark:to-cyan-500/80 w-80 h-60 mt-12">
-            <article className="flex flex-col items-start justify-center gap-6 w-full h-full rounded-xl text-center bg-slate-50 dark:bg-gray-900 p-4">
-                <div>
-                    <div className="flex items-center gap-4">
-                        <div className="bg-slate-400/20 rounded-xl h-14 w-14 flex items-center justify-center">
-                            <img src="laser.svg" alt="" className="w-8 h-8" />
-                        </div>
+        <div className="p-[1px] rounded-xl w-full h-auto mt-12">
+            <article className=" flex flex-col items-start justify-center gap-6 w-full h-full rounded-xl bg-indigo-100/90 dark:bg-[#192c36] p-4">
 
-                        <h4 className="dark:text-white font-semibold">{ heading }</h4>
-                    </div>
+                <div className="bg-indigo-700/20 dark:bg-[#253648] rounded-md h-14 w-14 flex items-center justify-center">
+                    <img src="laser.svg" alt="" className="w-8 h-8" />
                 </div>
 
-                <p className="text-gray-400 text-base max-w-xs">
-                    { description }
+                <h5 className="text-indigo-800 dark:text-teal-400 font-semibold">{heading}</h5>
+
+
+
+                <p className="text-gray-400 dark:text-gray-300 text-base max-w-xs">
+                    {description}
                 </p>
 
-                <button className=" px-3 py-2  text-black dark:text-white flex items-center justify-center gap-2">Ver mas
-                    <MoveRight width={20} height={20} />
-                </button>
+            <button className="text-indigo-700 dark:text-teal-200 font-medium hover:underline flex items-center gap-2">
+            Ver más <MoveRight width={20} height={20} />
+            </button>
 
             </article>
         </div>

@@ -1,5 +1,5 @@
 import {  Wrench } from "lucide-react";
-import Badge from "./utils/badge";
+import Badge from "./badge";
 import ServiceCard from "./ServiceCard";
 import { services } from "@/data/servicesData";
 
@@ -17,7 +17,7 @@ export default function Services() {
             </div>
 
             {/* Cards */}
-            <div className="grid grid-cols-3 place-items-center">
+            <div className="grid grid-cols-3 place-items-center gap-3">
                 {services.map((service, index) => (
                     <ServiceCard
                         key={index}

@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight, Hammer } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import Badge from "./utils/badge"
+import Badge from "./badge"
 
 const jobsData = [
   {
