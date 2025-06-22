@@ -17,7 +17,7 @@ export default function Services() {
             </div>
 
             {/* Cards */}
-            <div className="grid grid-cols-3 place-items-center gap-3">
+            <div className="md:grid md:grid-cols-2 xl:grid-cols-3 place-items-center gap-3">
                 {services.map((service, index) => (
                     <ServiceCard
                         key={index}
@@ -26,9 +26,9 @@ export default function Services() {
                     />
                 ))}
 
-                <div className="flex items-center justify-center mt-16">
+                {/* <div className="flex items-center justify-center mt-16">
                     <button className="px-12 bg-metallic-blueSteel py-3 rounded-xl font-bold text-white">Explorar mas sobre nuestros servicios</button>
-                </div>
+                </div> */}
             </div>
             {/* //TODO */}
             {/* <div className="text-center mt-12">
