@@ -1,7 +1,7 @@
 
 export default function NamePage() {
     return (
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="min-h-screen flex items-center justify-center gap-32">
             {/* Content */}
             <div className="w-1/3 z-10 space-y-4 mt-32">
                 <p className="uppercase text-metallic-ironGray text-sm">Somos Taller de Soldadura Rodriguez</p>

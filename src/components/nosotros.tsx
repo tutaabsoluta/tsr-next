@@ -79,7 +79,7 @@ export default function Nosotros() {
 
   return (
     <section className="py-24">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 md:px-6">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 40 }}

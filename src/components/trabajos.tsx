@@ -151,7 +151,7 @@ export default function OurJobs() {
   }, [emblaApi, onInit, onSelect, onScroll, startAutoplay])
 
   return (
-    <section className="py-24 bg-gradient-to-br from-background via-secondary/5 to-background">
+    <section className="px-4 md:px-6">
       <div className="container mx-auto">
         <div className="mb-16">
           <motion.div
