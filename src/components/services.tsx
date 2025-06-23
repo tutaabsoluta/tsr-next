@@ -1,40 +1,90 @@
-import {  Wrench } from "lucide-react";
-import Badge from "./badge";
-import ServiceCard from "./ServiceCard";
-import { services } from "@/data/servicesData";
+"use client"
 
-export default function Services() {
+import { useRef } from "react"
+import Link from "next/link"
+import { motion, useInView } from "framer-motion"
+import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import ServiceCard from "@/components/ServiceCard"
+import { services } from '../data/servicesData'
 
+export default function ServicesPreview() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
 
-    return (
-        <section className="mt-24 container mx-auto px-4 md:px-6">
+  return (
+    <section className="py-16">
+      <div className="container mx-auto px-6">
+        <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-slate-200/50 dark:border-gray-700/50">
+          {/* Header */}
+          <div className="text-center mb-16 space-y-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-400/20 text-orange-600 dark:text-orange-300 text-sm font-medium mb-4">
+                Nuestra Expertiz
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+                Servicios Especializados
+              </h2>
+              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                Ofrecemos una gama completa de servicios de soldadura y fabricación de metales diseñados para satisfacer sus necesidades específicas con tecnología de vanguardia y artesanía experta.
+              </p>
+            </motion.div>
+          </div>
 
-            <div>
-                <Badge icon={Wrench} text="Servicios" />
-                <h2 className="mt-4">Nuestros servicios</h2>
-                <p className="text-slate-400">Ofrecemos una amplia gama de servicios de soldadura y fabricación <br />  de metales adaptados a sus necesidades específicas.</p>
+          {/* Services Grid */}
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.8, staggerChildren: 0.1 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          >
+            {services.slice(0, 6).map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <ServiceCard heading={service.heading} description={service.description} icon={service.icon} />
+              </motion.div>
+            ))}
+          </motion.div>
 
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="text-center"
+          >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-xl px-8 bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <Link href="/services">
+                  Ver todos los Servicios
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="rounded-xl px-8 border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800"
+              >
+                <Link href="/contact">Free Quote</Link>
+              </Button>
             </div>
-
-            {/* Cards */}
-            <div className="md:grid md:grid-cols-2 xl:grid-cols-3 place-items-center gap-3 mt-12">
-                {services.map((service, index) => (
-                    <ServiceCard
-                        key={index}
-                        heading={service.heading}
-                        description={service.description}
-                    />
-                ))}
-
-                {/* <div className="flex items-center justify-center mt-16">
-                    <button className="px-12 bg-metallic-blueSteel py-3 rounded-xl font-bold text-white">Explorar mas sobre nuestros servicios</button>
-                </div> */}
-            </div>
-            {/* //TODO */}
-            {/* <div className="text-center mt-12">
-                <h4>Tambien ofrecemos mantenimiento en camiones, automoviles y equipo industrial</h4>
-            </div> */}
-
-        </section>
-    );
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  )
 }

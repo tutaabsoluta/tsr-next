@@ -5,177 +5,172 @@ import Image from "next/image"
 import { motion, useInView } from "framer-motion"
 import { Quote, Star } from "lucide-react"
 import { testimoniales } from "@/lib/data"
-import Badge from "./badge"
 
 export default function Testimonials() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
 
-  // Select specific testimonials for the bento layout
   const mainTestimonial = testimoniales[0]
   const sideTestimonials = testimoniales.slice(1, 4)
 
   return (
-    <section className="py-24">
-      <div className="container mx-auto px-4 md:px-6">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ duration: 0.8 }}
-          // className="bg-card/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border border-border/50"
-        >
-          {/* Header */}
-          <div className="mb-12">
+    <section className="py-16">
+      <div className="container mx-auto px-6">
+        <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-slate-200/50 dark:border-gray-700/50">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.5 }}
+            ref={ref}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+            transition={{ duration: 0.8 }}
           >
-            <Badge icon={Quote} text="Testimoniales" />
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 mt-4">Lo que dicen nuestros clientes</h2>
-            <p className="max-w-2xl text-slate-400">
-              No se fíe solo de nuestras palabras. Esto es lo que nuestros clientes opinan sobre nuestros servicios
-            </p>
-          </motion.div>
-          </div>
-
-          {/* Bento Grid Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-            {/* Large testimonial - Left side */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-2 bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50 relative overflow-hidden"
-            >
-              <div className="absolute top-4 left-4">
-                <Quote className="h-8 w-8 text-primary/20" />
-              </div>
-
-              <div className="mb-6">
-                <div className="text-4xl font-bold text-primary mb-2">100%</div>
-                <div className="text-lg font-semibold mb-4">Client Satisfaction Rate</div>
-                <p className="text-lg italic leading-relaxed">"{mainTestimonial.quote}"</p>
-              </div>
-
-              <div className="flex items-center">
-                <div className="relative h-12 w-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src={mainTestimonial.avatar || "/placeholder.svg"}
-                    alt={mainTestimonial.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className="font-semibold">{mainTestimonial.name}</h4>
-                  <p className="text-muted-foreground text-sm">{mainTestimonial.title}</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Right side - 3 smaller testimonials */}
-            <div className="space-y-6">
-              {/* Top testimonial */}
+            {/* Header */}
+            <div className="text-center mb-16 space-y-4">
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 border border-border/50"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.6 }}
               >
-                <div className="mb-4">
-                  <div className="text-2xl font-bold text-primary mb-1">50+</div>
-                  <div className="text-sm font-semibold mb-3">Projects Completed</div>
-                  <p className="text-sm italic">"{sideTestimonials[0]?.quote.substring(0, 80)}..."</p>
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-400/20 text-orange-600 dark:text-orange-300 text-sm font-medium mb-4">
+                  <Quote className="h-4 w-4 mr-2" />
+                  Testimoniales
                 </div>
-                <div className="flex items-center">
-                  <div className="relative h-8 w-8 rounded-full overflow-hidden mr-3">
-                    <Image
-                      src={sideTestimonials[0]?.avatar || "/placeholder.svg"}
-                      alt={sideTestimonials[0]?.name || "Client"}
-                      fill
-                      className="object-cover"
-                    />
+                <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+                  Lo Que Dicen Nuestros Clientes
+                </h2>
+                <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                  No te quedes solo con nuestra palabra. Esto es lo que opinan nuestros clientes sobre nuestros servicios de soldadura.
+                </p>
+              </motion.div>
+            </div>
+
+            {/* Bento Grid Layout - Equal Width Columns */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              {/* Left Column - Main Testimonial */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-slate-50 dark:bg-gray-700 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-gray-600 relative overflow-hidden"
+              >
+                <div className="absolute top-6 left-6">
+                  <Quote className="h-8 w-8 text-orange-500/20 dark:text-orange-400/20" />
+                </div>
+
+                <div className="mb-8">
+                  <div className="text-4xl font-bold text-orange-500 dark:text-orange-400 mb-2">100%</div>
+                  <div className="text-lg font-semibold text-slate-900 dark:text-white mb-6">
+                    Client Satisfaction Rate
                   </div>
+                  <p className="text-lg italic leading-relaxed text-slate-600 dark:text-slate-300">
+                    "{mainTestimonial.quote}"
+                  </p>
+                </div>
+
+                <div className="flex items-center">
                   <div>
-                    <h5 className="font-medium text-sm">{sideTestimonials[0]?.name}</h5>
-                    <p className="text-xs text-muted-foreground">{sideTestimonials[0]?.title}</p>
+                    <h4 className="font-semibold text-slate-900 dark:text-white">{mainTestimonial.name}</h4>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm">{mainTestimonial.title}</p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Bottom two testimonials */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+              {/* Right Column - Multiple Testimonials */}
+              <div className="flex flex-col gap-6">
+                {/* Top Testimonial */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="bg-card/50 backdrop-blur-sm rounded-2xl p-4 border border-border/50"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="bg-slate-50 dark:bg-gray-700 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 dark:border-gray-600"
                 >
-                  <p className="text-sm italic mb-3">"{sideTestimonials[1]?.quote.substring(0, 60)}..."</p>
+                  <div className="mb-4">
+                    <div className="text-2xl font-bold text-orange-500 dark:text-orange-400 mb-1">500+</div>
+                    <div className="text-sm font-semibold text-slate-900 dark:text-white mb-3">Projects Completed</div>
+                    <p className="text-sm italic text-slate-600 dark:text-slate-300">
+                      "{sideTestimonials[0]?.quote.substring(0, 80)}..."
+                    </p>
+                  </div>
                   <div className="flex items-center">
-                    <div className="relative h-6 w-6 rounded-full overflow-hidden mr-2">
-                      <Image
-                        src={sideTestimonials[1]?.avatar || "/placeholder.svg"}
-                        alt={sideTestimonials[1]?.name || "Client"}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
                     <div>
-                      <h6 className="font-medium text-xs">{sideTestimonials[1]?.name}</h6>
-                      <p className="text-xs text-muted-foreground">{sideTestimonials[1]?.title}</p>
+                      <h5 className="font-medium text-sm text-slate-900 dark:text-white">
+                        {sideTestimonials[0]?.name}
+                      </h5>
+                      <p className="text-xs text-slate-500 dark:text-slate-400">{sideTestimonials[0]?.title}</p>
                     </div>
                   </div>
                 </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  className="bg-primary/10 backdrop-blur-sm rounded-2xl p-4 border border-primary/20"
-                >
-                  <p className="text-sm italic mb-3">"{sideTestimonials[2]?.quote.substring(0, 60)}..."</p>
-                  <div className="flex items-center">
-                    <div className="relative h-6 w-6 rounded-full overflow-hidden mr-2">
-                      <Image
-                        src={sideTestimonials[2]?.avatar || "/placeholder.svg"}
-                        alt={sideTestimonials[2]?.name || "Client"}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h6 className="font-medium text-xs">{sideTestimonials[2]?.name}</h6>
-                      <p className="text-xs text-muted-foreground">{sideTestimonials[2]?.title}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          </div>
+                {/* Bottom Two Testimonials */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="bg-slate-50 dark:bg-gray-700 backdrop-blur-sm rounded-2xl p-4 border border-slate-200 dark:border-gray-600"
+                  >
+                    <p className="text-sm italic text-slate-600 dark:text-slate-300 mb-3">
+                      "{sideTestimonials[1]?.quote.substring(0, 60)}..."
+                    </p>
+                    <div className="flex items-center">
 
-          {/* Bottom stats section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-border/50"
-          >
-            <div className="flex items-center mb-4 sm:mb-0">
-              <div className="flex items-center mr-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                ))}
-                <span className="ml-2 font-semibold">4.8</span>
-              </div>
-              <div className="text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">200+</span> satisfied clients love our services
+                      <div>
+                        <h6 className="font-medium text-xs text-slate-900 dark:text-white">
+                          {sideTestimonials[1]?.name}
+                        </h6>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">{sideTestimonials[1]?.title}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    className="bg-orange-100 dark:bg-orange-400/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-200 dark:border-orange-400/30"
+                  >
+                    <p className="text-sm italic text-slate-600 dark:text-slate-300 mb-3">
+                      "{sideTestimonials[2]?.quote.substring(0, 60)}..."
+                    </p>
+                    <div className="flex items-center">
+                      <div>
+                        <h6 className="font-medium text-xs text-slate-900 dark:text-white">
+                          {sideTestimonials[2]?.name}
+                        </h6>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">{sideTestimonials[2]?.title}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
               </div>
             </div>
+
+            {/* Bottom Stats Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-slate-200 dark:border-gray-600"
+            >
+              <div className="flex items-center mb-4 sm:mb-0">
+                <div className="flex items-center mr-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 fill-orange-400 dark:fill-orange-300 text-orange-400 dark:text-orange-300"
+                    />
+                  ))}
+                  <span className="ml-2 font-semibold text-slate-900 dark:text-white">4.9</span>
+                </div>
+                <div className="text-sm text-slate-600 dark:text-slate-300">
+                  <span className="font-semibold text-slate-900 dark:text-white">200+</span> satisfied clients
+                </div>
+              </div>
+              <button className="text-sm font-medium text-orange-500 dark:text-orange-400 hover:text-orange-600 dark:hover:text-orange-300 transition-colors">
+                View all reviews →
+              </button>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

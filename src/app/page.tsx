@@ -5,7 +5,6 @@ import Testimoniales from "@/components/testimoniales";
 import Trabajos from "@/components/trabajos";
 import Footer from "@/components/footer";
 import { Metadata } from "next";
-import Separator from "@/components/separator";
 
 // export const metadata: Metadata = {
 //   title: "TSR | Taller de Soldadura Rodríguez",
@@ -33,7 +32,6 @@ export default function Home() {
       <Header />
       <Services />
       <Trabajos />
-      {/* <Separator /> */}
       <Testimoniales />
       <Nosotros />
       <Footer />
