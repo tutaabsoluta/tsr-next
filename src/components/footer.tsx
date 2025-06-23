@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="py-16 ">
       <div className="container mx-auto px-6">
-        <div className="md:bg-white/90 md:dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-4 md:p-12 md:shadow-xl md:border border-slate-200/50 dark:border-gray-700/50">
+        <div className="md:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-4 md:p-12 md:shadow-xl md:border border-gray-700/50">
           {/* Contenido principal del footer */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Información de la empresa */}
@@ -26,35 +26,35 @@ export default function Footer() {
                 <img src="logo2.png" alt="Logo de Empresa" className="w-full h-16" />
               </Link>
 
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed max-w-md">
+              <p className="text-slate-300 leading-relaxed max-w-md">
                 Servicios profesionales de soldadura y fabricación metálica con tecnología avanzada de limpieza láser. Calidad artesanal en cada proyecto.
               </p>
 
               {/* Lista de contacto */}
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-green-500 dark:text-orange-400 mt-0.5 flex-shrink-0" />
+                  <MapPin className="h-5 w-5 text-orange-400 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-sm font-medium text-slate-900 dark:text-white">San Rafael, Vazquez Coronado</p>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">San José, Costa Rica</p>
+                    <p className="text-sm font-medium text-white">San Rafael, Vazquez Coronado</p>
+                    <p className="text-sm text-slate-300">San José, Costa Rica</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-green-500 dark:text-orange-400 flex-shrink-0" />
+                  <Phone className="h-5 w-5 text-orange-400 flex-shrink-0" />
                   <Link
                     href="tel:+50622290887"
-                    className="text-sm font-medium text-slate-900 dark:text-white hover:text-green-500 dark:hover:text-orange-400 transition-colors"
+                    className="text-sm font-medium text-white hover:text-orange-400 transition-colors"
                   >
                     +506 2229 0887
                   </Link>
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-green-500 dark:text-orange-400 flex-shrink-0" />
+                  <Mail className="h-5 w-5 text-orange-400 flex-shrink-0" />
                   <Link
                     href="mailto:info@weldingworkshop.com"
-                    className="text-sm font-medium text-slate-900 dark:text-white hover:text-green-500 dark:hover:text-orange-400 transition-colors"
+                    className="text-sm font-medium text-white hover:text-orange-400 transition-colors"
                   >
                     t_rodriguezltda@hotmail.com
                   </Link>
@@ -64,7 +64,7 @@ export default function Footer() {
 
             {/* Enlaces rápidos */}
             <div className="space-y-6">
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Enlaces Rápidos</h3>
+              <h3 className="text-lg font-semibold text-white">Enlaces Rápidos</h3>
               <ul className="space-y-3">
                 {[
                   { label: "Inicio", href: "/" },
@@ -77,7 +77,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-slate-600 dark:text-slate-300 hover:text-green-500 dark:hover:text-orange-400 transition-colors duration-300 text-sm"
+                      className="text-slate-300 hover:text-orange-400 transition-colors duration-300 text-sm"
                     >
                       {link.label}
                     </Link>
@@ -88,7 +88,7 @@ export default function Footer() {
 
             {/* Servicios */}
             <div className="space-y-6">
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Nuestros Servicios</h3>
+              <h3 className="text-lg font-semibold text-white">Nuestros Servicios</h3>
               <ul className="space-y-3">
                 {[
                   "Limpieza Láser",
@@ -101,7 +101,7 @@ export default function Footer() {
                   <li key={service}>
                     <Link
                       href="/services"
-                      className="text-slate-600 dark:text-slate-300 hover:text-green-500 dark:hover:text-orange-400 transition-colors duration-300 text-sm"
+                      className="text-slate-300 hover:text-orange-400 transition-colors duration-300 text-sm"
                     >
                       {service}
                     </Link>
@@ -112,10 +112,10 @@ export default function Footer() {
           </div>
 
           {/* Sección inferior */}
-          <div className="pt-8 border-t border-slate-200 dark:border-gray-600">
+          <div className="pt-8 border-t border-gray-600">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               {/* Derechos de autor */}
-              <p className="text-slate-500 dark:text-slate-400 text-sm">
+              <p className="text-slate-400 text-sm">
                 © {new Date().getFullYear()} Taller de Soldadura Rodriguez. Todos los derechos reservados.
               </p>
 
@@ -134,7 +134,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Icon className="h-5 w-5 text-slate-600 dark:text-slate-300 group-hover:text-green-500 dark:group-hover:text-orange-400 transition-colors duration-300" />
+                    <Icon className="h-5 w-5 text-slate-300 group-hover:text-orange-400 transition-colors duration-300" />
                   </Link>
                 ))}
               </div>

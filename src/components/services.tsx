@@ -10,27 +10,27 @@ import { services } from '../data/servicesData'
 
 export default function ServicesPreview() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 }) // Más sensible y se activa antes
 
   return (
     <section className="py-16">
       <div className="container mx-auto md:px-6">
-        <div className="md:bg-white/90 md:dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-12 md:shadow-xl md:border border-slate-200/50 dark:border-gray-700/50">
+        <div className="md:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-12 md:shadow-xl md:border border-gray-700/50">
           {/* Header */}
-          <div className="text-center mb-16 space-y-4">
+          <div ref={ref} className="text-center mb-16 space-y-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-400/30 dark:bg-orange-400/20 text-metallic-patina dark:text-orange-300 text-sm font-medium mb-4">
-              <Settings />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-400/20 text-orange-300 text-sm font-medium mb-4">
+                <Settings />
                 Servicios
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
                 Servicios Especializados
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
                 Ofrecemos una gama completa de servicios de soldadura y fabricación de metales diseñados para satisfacer sus necesidades específicas con tecnología de vanguardia y artesanía experta.
               </p>
             </motion.div>
@@ -38,7 +38,6 @@ export default function ServicesPreview() {
 
           {/* Services Grid */}
           <motion.div
-            ref={ref}
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.8, staggerChildren: 0.1 }}
@@ -67,7 +66,7 @@ export default function ServicesPreview() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-xl px-8 bg-green-400 hover:bg-green-500 dark:bg-orange-400 dark:hover:bg-orange-500 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                className="rounded-xl px-8 bg-orange-400 hover:bg-orange-500 text-white shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Link href="/services">
                   Ver todos los Servicios
@@ -77,7 +76,7 @@ export default function ServicesPreview() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="rounded-xl px-8 border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="rounded-xl px-8 border-slate-600 hover:bg-slate-800"
               >
               </Button>
             </div>

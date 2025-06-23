@@ -32,12 +32,7 @@ export default function RootLayout({
       <body
         className={`${lato.variable} ${merriweather.variable} bg-light-background bg-gradient-to-tr dark:from-slate-900 dark:via-slate-800 dark:to-slate-900`}
       >
-        <ThemeProvider
-          attribute='class'
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute='class' defaultTheme="system" enableSystem disableTransitionOnChange>
           <Navbar />
           {children}
           <BotonWhatsapp />

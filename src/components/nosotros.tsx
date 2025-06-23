@@ -74,7 +74,7 @@ export default function AboutSection() {
   return (
     <section className="py-16">
       <div className="container mx-auto md:px-6">
-        <div className="md:bg-white/90 md:dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-4 md:p-12 md:shadow-xl md:border border-slate-200/50 dark:border-gray-700/50">
+        <div className="md:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-4 md:p-12 md:shadow-xl md:border border-gray-700/50">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div className="space-y-8">
@@ -85,16 +85,16 @@ export default function AboutSection() {
                 transition={{ duration: 0.6 }}
                 className="space-y-6"
               >
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 dark:bg-orange-400/20 text-green-600 dark:text-orange-300 text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-400/20 text-orange-300 text-sm font-medium">
                   <Users />
                   Nosotros
                 </div>
 
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
                   Quienes Somos
                 </h2>
 
-                <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+                <p className="text-slate-300 text-lg leading-relaxed">
                   Fundado con una pasión por el trabajo metálico de precisión, nuestro taller ha crecido desde sus inicios humildes hasta convertirse en un nombre de confianza en servicios de soldadura y fabricación.
                 </p>
               </motion.div>
@@ -110,15 +110,15 @@ export default function AboutSection() {
                     className="space-y-2"
                   >
                     <div className="flex items-baseline space-x-1">
-                      <span className="text-3xl md:text-4xl font-bold text-metallic-patina dark:text-orange-300">
+                      <span className="text-3xl md:text-4xl font-bold text-orange-300">
                         {counts[index]}
                       </span>
-                      <span className="text-2xl md:text-3xl font-bold text-metallic-patina dark:text-orange-300">
+                      <span className="text-2xl md:text-3xl font-bold text-orange-300">
                         {stat.suffix}
                       </span>
                     </div>
-                    <h3 className="font-semibold text-slate-900 dark:text-white text-sm md:text-base">{stat.label}</h3>
-                    <p className="text-xs md:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <h3 className="font-semibold text-white text-sm md:text-base">{stat.label}</h3>
+                    <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
                       {stat.description}
                     </p>
                   </motion.div>
@@ -133,7 +133,7 @@ export default function AboutSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              <div className="relative h-[500px] rounded-2xl overflow-hidden bg-slate-100 dark:bg-gray-700">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden bg-gray-700">
                 <Image
                   src="/taller.webp"
                   alt="Welding workshop team"

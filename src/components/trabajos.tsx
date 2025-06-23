@@ -60,7 +60,7 @@ export default function OurJobs() {
   return (
     <section className="py-16">
       <div className="container mx-auto md:px-6">
-        <div className="md:bg-white/90 md:dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-2 md:p-12 md:shadow-xl md:border border-slate-200/50 dark:border-gray-700/50">
+        <div className="md:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-2 md:p-12 md:shadow-xl md:borderborder-gray-700/50">
           {/* Header */}
           <div className="text-center mb-16 space-y-4">
             <motion.div
@@ -69,14 +69,14 @@ export default function OurJobs() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 dark:bg-orange-400/20 text-green-600 dark:text-orange-300 text-sm font-medium mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-400/20 text-orange-300 text-sm font-medium mb-4">
               <Hammer />
                 Nuestros Trabajos
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
                 Proyectos Destacados
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
                 Conocé nuestros proyectos de soldadura y reparación, reflejo de nuestro compromiso con la calidad, la precisión y el servicio personalizado.
               </p>
             </motion.div>
@@ -88,7 +88,7 @@ export default function OurJobs() {
               <div className="flex">
                 {jobsData.map((job) => (
                   <div key={job.id} className="flex-[0_0_100%] px-2">
-                    <div className="bg-slate-50 dark:bg-gray-700 rounded-2xl overflow-hidden">
+                    <div className="bg-gray-700 rounded-2xl overflow-hidden">
                       <div className="relative h-[400px] md:h-[500px]">
                         <Image src={job.image || "/placeholder.svg"} alt={job.title} fill className="object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -110,7 +110,7 @@ export default function OurJobs() {
                   variant="outline"
                   size="icon"
                   onClick={scrollPrev}
-                  className="rounded-xl border-slate-300 dark:border-gray-600"
+                  className="rounded-xl border-gray-600"
                 >
                   <ChevronLeft className="h-4 w-4" />
                 </Button>
@@ -118,7 +118,7 @@ export default function OurJobs() {
                   variant="outline"
                   size="icon"
                   onClick={scrollNext}
-                  className="rounded-xl border-slate-300 dark:border-gray-600"
+                  className="rounded-xl border-gray-600"
                 >
                   <ChevronRight className="h-4 w-4" />
                 </Button>
@@ -130,7 +130,7 @@ export default function OurJobs() {
                     key={index}
                     onClick={() => scrollTo(index)}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === selectedIndex ? "bg-metallic-patina dark:bg-orange-400 w-8" : "bg-slate-300 dark:bg-gray-600"
+                      index === selectedIndex ? "bg-orange-400 w-8" : "bg-gray-600"
                     }`}
                   />
                 ))}

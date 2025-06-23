@@ -37,7 +37,7 @@ export default function BotonWhatsapp() {
                 initial={{ opacity: 0, y: 20, scale: 0.8 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.8 }}
-                className="bg-slate-500 dark:bg-[#304d3b] rounded-lg shadow-lg p-4 mb-4 w-72"
+                className="bg-[#304d3b] rounded-lg shadow-lg p-4 mb-4 w-72"
               >
                 <div className="flex justify-between items-center mb-4">
                   <h3 className="font-semibold text-white">Escríbenos</h3>
