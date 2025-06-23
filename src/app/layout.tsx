@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Lato, Merriweather } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import { Navbar } from "@/components/navbar";
+import Navbar from "@/components/navbar";
 
 const lato = Lato({
   variable: "--font-lato",

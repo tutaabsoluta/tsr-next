@@ -14,7 +14,7 @@ export default function ServiceCard({ heading, description }: ServiceCardProps) 
                     <img src="laser.svg" alt="" className="w-8 h-8" />
                 </div>
 
-                <h5 className="text-indigo-800 dark:text-teal-400 font-semibold">{heading}</h5>
+                <h5 className="text-indigo-800 dark:text-orange-400 font-semibold">{heading}</h5>
 
 
 
@@ -22,7 +22,7 @@ export default function ServiceCard({ heading, description }: ServiceCardProps) 
                     {description}
                 </p>
 
-            <button className="text-indigo-700 dark:text-teal-200 font-medium hover:underline flex items-center gap-2">
+            <button className="text-indigo-700 dark:text-orange-200 font-medium hover:underline flex items-center gap-2">
             Ver más <MoveRight width={20} height={20} />
             </button>
 

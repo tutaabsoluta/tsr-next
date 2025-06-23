@@ -1,20 +1,111 @@
+"use client"
 
-export default function NamePage() {
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+
+import { ArrowDown } from "lucide-react"
+
+
+
+export default function HeaderSection() {
+    const [isScrolled, setIsScrolled] = useState(false)
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10)
+        }
+
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
+
     return (
-        <div className="min-h-screen flex items-center justify-center gap-32">
-            {/* Content */}
-            <div className=" z-10 space-y-4 mt-32">
-                <p className="uppercase text-metallic-ironGray text-sm">Somos Taller de Soldadura Rodriguez</p>
-                <h1 className="tracking-tighter dark:text-white text-slate-800">Confianza y calidad <span className="text-metallic-patina dark:text-cyan-400 font-black">en cada punto de soldadura</span></h1>
-                <p className="text-slate-500">Solucionamos problemas críticos de soldadura con servicios hechos a medida: limpieza láser, reparación de piezas y <br /> fabricación de componentes personalizados
-                </p>
+        <>
 
-                <div className="">
-                    <button className="bg-metallic-blueSteel px-6 py-3 rounded-md font-bold hover:bg-cyan-900 transition-all duration-300 text-white mt-4">Comunicate con nosotros</button>
+            {/* Industrial Typography Hero Section */}
+            <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                {/* Industrial SVG Background Shapes */}
+
+
+                {/* Content using your template structure */}
+                <div className="container mx-auto px-4 md:px-6 relative z-10">
+                    <div className="min-h-screen flex items-center justify-center gap-32">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="z-10 space-y-4 mt-32"
+                        >
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.3 }}
+                                className="uppercase text-slate-400 text-sm font-bold tracking-wider"
+                            >
+                                Somos Taller de Soldadura Rodriguez
+                            </motion.p>
+
+                            <motion.h1
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.4 }}
+                                className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-slate-100 leading-none"
+                            >
+                                Confianza y calidad{" "}
+                                <span className="bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 bg-clip-text text-transparent font-black">
+                                    en cada punto de soldadura
+                                </span>
+                            </motion.h1>
+
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.6 }}
+                                className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-3xl"
+                            >
+                                Solucionamos problemas críticos de soldadura con servicios hechos a medida: limpieza láser, reparación
+                                de piezas y <br className="hidden md:block" />
+                                fabricación de componentes personalizados
+                            </motion.p>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.8 }}
+                                className="pt-4"
+                            >
+                                <Button
+                                    asChild
+                                    size="lg"
+                                    className="px-8 py-4 text-lg rounded-none bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white shadow-2xl hover:shadow-orange-600/25 transition-all duration-300 transform hover:scale-105 font-bold tracking-wide uppercase mt-4"
+                                >
+                                    <Link href="/contact">Comunicate con nosotros</Link>
+                                </Button>
+                            </motion.div>
+                        </motion.div>
+                    </div>
                 </div>
-            </div>
 
-
-        </div>
-    );
+                {/* Scroll Indicator */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 1 }}
+                    className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+                >
+                    <motion.div
+                        animate={{ y: [0, 10, 0] }}
+                        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+                        className="flex flex-col items-center space-y-2 text-slate-400"
+                    >
+                        <span className="text-sm uppercase tracking-wider">Explorar</span>
+                        <ArrowDown className="h-5 w-5" />
+                    </motion.div>
+                </motion.div>
+            </section>
+        </>
+    )
 }
