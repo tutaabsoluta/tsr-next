@@ -77,13 +77,11 @@ export default function HeaderSection() {
                                 transition={{ duration: 0.6, delay: 0.8 }}
                                 className="pt-4"
                             >
-                                <Button
-                                    asChild
-                                    size="lg"
-                                    className="px-8 py-4 text-lg rounded-none bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white shadow-2xl hover:shadow-orange-600/25 transition-all duration-300 transform hover:scale-105 font-bold tracking-wide uppercase mt-4"
+                                <button
+                                    className="outline outline-1 outline-metallic-weldingOrange px-8 py-2 rounded-xl bg-orange-300/10 hover:bg-orange-300/30 duration-300 transition-all ease-out"
                                 >
                                     <Link href="/contact">Comunicate con nosotros</Link>
-                                </Button>
+                                </button>
                             </motion.div>
                         </motion.div>
                     </div>

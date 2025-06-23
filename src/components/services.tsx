@@ -17,7 +17,7 @@ export default function Services() {
             </div>
 
             {/* Cards */}
-            <div className="md:grid md:grid-cols-2 xl:grid-cols-3 place-items-center gap-3">
+            <div className="md:grid md:grid-cols-2 xl:grid-cols-3 place-items-center gap-3 mt-12">
                 {services.map((service, index) => (
                     <ServiceCard
                         key={index}
