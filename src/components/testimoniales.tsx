@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
@@ -60,7 +60,7 @@ export default function Testimonials() {
                     Calidad Incomparable
                   </div>
                   <p className="text-lg italic leading-relaxed text-slate-600 dark:text-slate-300">
-                    "{mainTestimonial.quote}"
+                    {mainTestimonial.quote}
                   </p>
                 </div>
 
@@ -84,7 +84,7 @@ export default function Testimonials() {
                   <div className="mb-4">
                     <div className="text-sm font-semibold text-slate-900 dark:text-orange-300 mb-3">100% Recomendados</div>
                     <p className="text-sm italic text-slate-600 dark:text-slate-300">
-                      "{sideTestimonials[0]?.quote}"
+                      {sideTestimonials[0]?.quote}
                     </p>
                   </div>
                   <div className="flex items-center">
@@ -106,7 +106,7 @@ export default function Testimonials() {
                     className="bg-slate-50 dark:bg-gray-700 backdrop-blur-sm rounded-2xl p-4 border border-slate-200 dark:border-gray-600"
                   >
                     <p className="text-sm italic text-slate-600 dark:text-slate-300 mb-3">
-                      "{sideTestimonials[1]?.quote.substring(0, 100)}..."
+                      {sideTestimonials[1]?.quote.substring(0, 100)}
                     </p>
                     <div className="flex items-center">
 
@@ -126,7 +126,7 @@ export default function Testimonials() {
                     className="bg-green-100 dark:bg-orange-400/20 backdrop-blur-sm rounded-2xl p-4 border border-green-200 dark:border-orange-400/30"
                   >
                     <p className="text-sm italic text-slate-600 dark:text-slate-300 mb-3">
-                      "{sideTestimonials[2]?.quote.substring(0, 100)}..."
+                      {sideTestimonials[2]?.quote.substring(0, 100)}
                     </p>
                     <div className="flex items-center">
                       <div>
