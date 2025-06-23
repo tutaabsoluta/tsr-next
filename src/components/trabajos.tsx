@@ -71,7 +71,7 @@ export default function OurJobs() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-400/20 text-orange-600 dark:text-orange-300 text-sm font-medium mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 dark:bg-orange-400/20 text-green-600 dark:text-orange-300 text-sm font-medium mb-4">
               <Hammer />
                 Nuestros Trabajos
               </div>
@@ -132,7 +132,7 @@ export default function OurJobs() {
                     key={index}
                     onClick={() => scrollTo(index)}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === selectedIndex ? "bg-orange-500 dark:bg-orange-400 w-8" : "bg-slate-300 dark:bg-gray-600"
+                      index === selectedIndex ? "bg-metallic-patina dark:bg-orange-400 w-8" : "bg-slate-300 dark:bg-gray-600"
                     }`}
                   />
                 ))}

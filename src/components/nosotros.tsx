@@ -85,7 +85,7 @@ export default function AboutSection() {
                 transition={{ duration: 0.6 }}
                 className="space-y-6"
               >
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-400/20 text-orange-600 dark:text-orange-300 text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 dark:bg-orange-400/20 text-green-600 dark:text-orange-300 text-sm font-medium">
                   <Users />
                   Nosotros
                 </div>
@@ -110,10 +110,10 @@ export default function AboutSection() {
                     className="space-y-2"
                   >
                     <div className="flex items-baseline space-x-1">
-                      <span className="text-3xl md:text-4xl font-bold text-orange-500 dark:text-orange-300">
+                      <span className="text-3xl md:text-4xl font-bold text-metallic-patina dark:text-orange-300">
                         {counts[index]}
                       </span>
-                      <span className="text-2xl md:text-3xl font-bold text-orange-500 dark:text-orange-300">
+                      <span className="text-2xl md:text-3xl font-bold text-metallic-patina dark:text-orange-300">
                         {stat.suffix}
                       </span>
                     </div>

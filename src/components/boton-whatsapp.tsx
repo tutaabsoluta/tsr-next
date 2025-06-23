@@ -40,12 +40,12 @@ export default function BotonWhatsapp() {
                 className="bg-slate-500 dark:bg-[#304d3b] rounded-lg shadow-lg p-4 mb-4 w-72"
               >
                 <div className="flex justify-between items-center mb-4">
-                  <h3 className="font-semibold">Escríbenos</h3>
-                  <Button variant="ghost" size="icon" className="h-6 w-6" onClick={() => setIsOpen(false)}>
+                  <h3 className="font-semibold text-white">Escríbenos</h3>
+                  <Button variant="ghost" size="icon" className="h-6 w-6 text-white" onClick={() => setIsOpen(false)}>
                     <X className="h-4 w-4" />
                   </Button>
                 </div>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-white text-sm text-muted-foreground mb-4">
                   ¿Tienes alguna consulta? Chatea con nosotros de forma directa por WhatsApp.
                 </p>
                 <Button

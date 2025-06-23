@@ -23,7 +23,7 @@ export default function ServicesPreview() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-400/20 text-orange-600 dark:text-orange-300 text-sm font-medium mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-400/30 dark:bg-orange-400/20 text-metallic-patina dark:text-orange-300 text-sm font-medium mb-4">
               <Settings />
                 Servicios
               </div>
@@ -67,7 +67,7 @@ export default function ServicesPreview() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-xl px-8 bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                className="rounded-xl px-8 bg-green-400 hover:bg-green-500 dark:bg-orange-400 dark:hover:bg-orange-500 text-white shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Link href="/services">
                   Ver todos los Servicios

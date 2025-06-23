@@ -53,7 +53,7 @@ export default function HeaderSection() {
                                 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter dark:text-slate-100 leading-none"
                             >
                                 Confianza y calidad{" "}
-                                <span className="bg-gradient-to-r from-orange-400 via-orange-400 to-orange-500 bg-clip-text text-transparent font-black">
+                                <span className="text-metallic-patina dark:text-metallic-weldingOrange">
                                     en cada punto de soldadura
                                 </span>
                             </motion.h1>
@@ -76,7 +76,7 @@ export default function HeaderSection() {
                                 className="pt-4"
                             >
                                 <button
-                                    className="outline outline-1 outline-metallic-weldingOrange px-8 py-2 rounded-xl bg-orange-300/10 hover:bg-orange-300/30 duration-300 transition-all ease-out"
+                                    className="outline outline-1 outline-metallic-patina bg-metallic-patina/30 hover:bg-metallic-patina-300/70 dark:outline-metallic-weldingOrange px-8 py-2 rounded-xl dark:bg-orange-300/10 dark:hover:bg-orange-300/30 duration-300 transition-all ease-out"
                                 >
                                     <Link href="/contact">Comunicate con nosotros</Link>
                                 </button>

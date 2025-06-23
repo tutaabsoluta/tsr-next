@@ -29,7 +29,7 @@ export default function Testimonials() {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-400/20 text-orange-600 dark:text-orange-300 text-sm font-medium mb-4">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 dark:bg-orange-400/20 text-green-600 dark:text-orange-300 text-sm font-medium mb-4">
                   <Quote className="h-4 w-4 mr-2" />
                   Testimoniales
                 </div>
@@ -52,7 +52,7 @@ export default function Testimonials() {
                 className="bg-slate-50 dark:bg-gray-700 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-gray-600 relative overflow-hidden"
               >
                 <div className="absolute top-4 left-4">
-                  <Quote className="h-8 w-8 text-orange-500/20 dark:text-orange-400/20" />
+                  <Quote className="h-8 w-8 text-green-500/40 dark:text-orange-400/20" />
                 </div>
 
                 <div className="mb-8">
@@ -123,7 +123,7 @@ export default function Testimonials() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
-                    className="bg-orange-100 dark:bg-orange-400/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-200 dark:border-orange-400/30"
+                    className="bg-green-100 dark:bg-orange-400/20 backdrop-blur-sm rounded-2xl p-4 border border-green-200 dark:border-orange-400/30"
                   >
                     <p className="text-sm italic text-slate-600 dark:text-slate-300 mb-3">
                       "{sideTestimonials[2]?.quote.substring(0, 100)}..."

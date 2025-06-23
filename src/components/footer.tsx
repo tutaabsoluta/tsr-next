@@ -33,7 +33,7 @@ export default function Footer() {
               {/* Lista de contacto */}
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-orange-500 dark:text-orange-400 mt-0.5 flex-shrink-0" />
+                  <MapPin className="h-5 w-5 text-green-500 dark:text-orange-400 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="text-sm font-medium text-slate-900 dark:text-white">San Rafael, Vazquez Coronado</p>
                     <p className="text-sm text-slate-600 dark:text-slate-300">San José, Costa Rica</p>
@@ -41,20 +41,20 @@ export default function Footer() {
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-orange-500 dark:text-orange-400 flex-shrink-0" />
+                  <Phone className="h-5 w-5 text-green-500 dark:text-orange-400 flex-shrink-0" />
                   <Link
                     href="tel:+50622290887"
-                    className="text-sm font-medium text-slate-900 dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition-colors"
+                    className="text-sm font-medium text-slate-900 dark:text-white hover:text-green-500 dark:hover:text-orange-400 transition-colors"
                   >
                     +506 2229 0887
                   </Link>
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-orange-500 dark:text-orange-400 flex-shrink-0" />
+                  <Mail className="h-5 w-5 text-green-500 dark:text-orange-400 flex-shrink-0" />
                   <Link
                     href="mailto:info@weldingworkshop.com"
-                    className="text-sm font-medium text-slate-900 dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition-colors"
+                    className="text-sm font-medium text-slate-900 dark:text-white hover:text-green-500 dark:hover:text-orange-400 transition-colors"
                   >
                     t_rodriguezltda@hotmail.com
                   </Link>
@@ -77,7 +77,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-slate-600 dark:text-slate-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors duration-300 text-sm"
+                      className="text-slate-600 dark:text-slate-300 hover:text-green-500 dark:hover:text-orange-400 transition-colors duration-300 text-sm"
                     >
                       {link.label}
                     </Link>
@@ -101,7 +101,7 @@ export default function Footer() {
                   <li key={service}>
                     <Link
                       href="/services"
-                      className="text-slate-600 dark:text-slate-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors duration-300 text-sm"
+                      className="text-slate-600 dark:text-slate-300 hover:text-green-500 dark:hover:text-orange-400 transition-colors duration-300 text-sm"
                     >
                       {service}
                     </Link>
@@ -134,7 +134,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Icon className="h-5 w-5 text-slate-600 dark:text-slate-300 group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors duration-300" />
+                    <Icon className="h-5 w-5 text-slate-600 dark:text-slate-300 group-hover:text-green-500 dark:group-hover:text-orange-400 transition-colors duration-300" />
                   </Link>
                 ))}
               </div>
