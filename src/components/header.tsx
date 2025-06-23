@@ -26,7 +26,7 @@ export default function HeaderSection() {
         <>
 
             {/* Industrial Typography Hero Section */}
-            <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+            <section className="relative min-h-screen flex items-center justify-center overflow-hidden ">
                 {/* Industrial SVG Background Shapes */}
 
 
@@ -52,10 +52,10 @@ export default function HeaderSection() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.4 }}
-                                className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-slate-100 leading-none"
+                                className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter dark:text-slate-100 leading-none"
                             >
                                 Confianza y calidad{" "}
-                                <span className="bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 bg-clip-text text-transparent font-black">
+                                <span className="bg-gradient-to-r from-orange-400 via-orange-400 to-orange-500 bg-clip-text text-transparent font-black">
                                     en cada punto de soldadura
                                 </span>
                             </motion.h1>
@@ -64,7 +64,7 @@ export default function HeaderSection() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.6 }}
-                                className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-3xl"
+                                className="text-slate-500 dark:text-slate-300 text-lg md:text-xl leading-relaxed max-w-3xl"
                             >
                                 Solucionamos problemas críticos de soldadura con servicios hechos a medida: limpieza láser, reparación
                                 de piezas y <br className="hidden md:block" />
@@ -99,7 +99,7 @@ export default function HeaderSection() {
                     <motion.div
                         animate={{ y: [0, 10, 0] }}
                         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-                        className="flex flex-col items-center space-y-2 text-slate-400"
+                        className="flex flex-col items-center space-y-2 dark:text-slate-400"
                     >
                         <span className="text-sm uppercase tracking-wider">Explorar</span>
                         <ArrowDown className="h-5 w-5" />

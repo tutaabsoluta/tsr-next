@@ -195,7 +195,7 @@ export default function OurJobs() {
                             src={job.image || "/placeholder.svg"}
                             alt={job.title}
                             fill
-                            className="object-cover"
+                            className="object-cover outline"
                             priority={index === 0}
                           />
                         </div>
@@ -221,7 +221,7 @@ export default function OurJobs() {
                   variant="outline"
                   size="icon"
                   onClick={scrollPrev}
-                  className="rounded-full border-border/50 hover:border-primary/50 hover:bg-primary/10"
+                  className="dark:text-white rounded-full border-border/50 hover:border-primary/50 hover:bg-metallic-patina/10 dark:hover:bg-metallic-weldingOrange/40"
                 >
                   <ChevronLeft className="h-4 w-4" />
                   <span className="sr-only">Previous slide</span>
@@ -230,7 +230,7 @@ export default function OurJobs() {
                   variant="outline"
                   size="icon"
                   onClick={scrollNext}
-                  className="rounded-full border-border/50 hover:border-primary/50 hover:bg-primary/10"
+                  className="dark:text-white rounded-full border-border/50 hover:border-primary/50 hover:bg-metallic-patina/10 dark:hover:bg-metallic-weldingOrange/40"
                 >
                   <ChevronRight className="h-4 w-4" />
                   <span className="sr-only">Next slide</span>
@@ -243,9 +243,9 @@ export default function OurJobs() {
                   <button
                     key={index}
                     onClick={() => scrollTo(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    className={`w-3 h-3 rounded-full transition-all duration-300 outline outline-1 outline-black ${
                       index === selectedIndex
-                        ? "bg-metallic-patina scale-110"
+                        ? "bg-metallic-patina scale-110 dark:bg-metallic-weldingOrange"
                         : "bg-slate-300 hover:bg-muted-foreground/50"
                     }`}
                     aria-label={`Go to slide ${index + 1}`}

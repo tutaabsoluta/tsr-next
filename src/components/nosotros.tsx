@@ -129,8 +129,8 @@ export default function Nosotros() {
                     className="space-y-2"
                   >
                     <div className="flex items-baseline space-x-1">
-                      <span className="text-3xl md:text-4xl font-bold text-primary">{counts[index]}</span>
-                      <span className="text-2xl md:text-3xl font-bold text-primary">{stat.suffix}</span>
+                      <span className="text-3xl md:text-4xl font-bold text-metallic-patina dark:text-orange-300">{counts[index]}</span>
+                      <span className="text-2xl md:text-3xl font-bold text-metallic-patina dark:text-orange-300">{stat.suffix}</span>
                     </div>
                     <h3 className="font-semibold text-foreground text-sm md:text-base">{stat.label}</h3>
                     <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{stat.description}</p>

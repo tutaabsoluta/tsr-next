@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${lato.variable} ${merriweather.variable} bg-light-background dark:bg-[#0f2127]`}
+        className={`${lato.variable} ${merriweather.variable} bg-light-background bg-gradient-to-tr dark:from-slate-900 dark:via-slate-800 dark:to-slate-900`}
       >
         <ThemeProvider
           attribute='class'
