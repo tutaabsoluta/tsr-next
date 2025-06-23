@@ -15,9 +15,9 @@ export default function Footer() {
   );
 
   return (
-    <footer className="py-16 bg-gradient-to-br from-slate-50 via-white to-orange-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-orange-900/10">
+    <footer className="py-16 ">
       <div className="container mx-auto px-6">
-        <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-slate-200/50 dark:border-gray-700/50">
+        <div className="md:bg-white/90 md:dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-4 md:p-12 md:shadow-xl md:border border-slate-200/50 dark:border-gray-700/50">
           {/* Contenido principal del footer */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Información de la empresa */}

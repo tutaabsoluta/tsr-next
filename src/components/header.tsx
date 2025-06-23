@@ -25,7 +25,7 @@ export default function HeaderSection() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="z-10 space-y-4 mt-32"
+                            className="z-10 space-y-4 md:mt-32"
                         >
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}

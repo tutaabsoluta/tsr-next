@@ -14,8 +14,8 @@ export default function ServicesPreview() {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-6">
-        <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-slate-200/50 dark:border-gray-700/50">
+      <div className="container mx-auto md:px-6">
+        <div className="md:bg-white/90 md:dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-12 md:shadow-xl md:border border-slate-200/50 dark:border-gray-700/50">
           {/* Header */}
           <div className="text-center mb-16 space-y-4">
             <motion.div

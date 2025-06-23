@@ -14,8 +14,8 @@ export default function Testimonials() {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-6">
-        <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-slate-200/50 dark:border-gray-700/50">
+      <div className="container mx-auto md:px-6">
+        <div className="md:bg-white/90 md:dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-4 md:p-12 md:shadow-xl md:border border-slate-200/50 dark:border-gray-700/50">
           <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 40 }}
@@ -49,7 +49,7 @@ export default function Testimonials() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-slate-50 dark:bg-gray-700 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-gray-600 relative overflow-hidden"
+                className="bg-slate-50 dark:bg-gray-700 backdrop-blur-sm rounded-2xl p-4 md:p-8 border border-slate-200 dark:border-gray-600 relative overflow-hidden"
               >
                 <div className="absolute top-4 left-4">
                   <Quote className="h-8 w-8 text-green-500/40 dark:text-orange-400/20" />

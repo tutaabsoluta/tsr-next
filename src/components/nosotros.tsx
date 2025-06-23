@@ -73,8 +73,8 @@ export default function AboutSection() {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-6">
-        <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-slate-200/50 dark:border-gray-700/50">
+      <div className="container mx-auto md:px-6">
+        <div className="md:bg-white/90 md:dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-4 md:p-12 md:shadow-xl md:border border-slate-200/50 dark:border-gray-700/50">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div className="space-y-8">

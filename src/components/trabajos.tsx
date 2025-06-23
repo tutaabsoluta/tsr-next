@@ -12,32 +12,31 @@ const jobsData = [
     id: 1,
     image: "/slider1.jpg",
     title: "Extensión personalizada de chasis de camión",
-    description:
-      "Extendimos el chasis de un camión de reparto comercial en 2 metros para adaptarlo a requisitos especiales de carga.",
+    description: "Extendimos el chasis 2 metros para carga especial.",
   },
   {
     id: 2,
     image: "/slider2.jpg",
     title: "Restauración con limpieza láser",
-    description: "Restauramos una máquina industrial antigua utilizando nuestra avanzada tecnología de limpieza láser.",
+    description: "Usamos limpieza láser para restaurar una máquina antigua.",
   },
   {
     id: 3,
     image: "/slider3.jpg",
     title: "Fabricación de mataburros de alta resistencia",
-    description: "Diseñamos y fabricamos un mataburros personalizado y robusto para un vehículo todoterreno.",
+    description: "Fabricamos un mataburros robusto para todoterreno.",
   },
   {
     id: 4,
     image: "/slider4.jpg",
     title: "Construcción de plataforma industrial",
-    description: "Construimos una plataforma de acceso multinivel para una planta de manufactura.",
+    description: "Construimos una plataforma de acceso para manufactura.",
   },
   {
     id: 5,
     image: "/slider5.jpg",
     title: "Sistema de escape de alto rendimiento",
-    description: "Fabricamos un sistema de escape de alto rendimiento para un auto deportivo, usando tubería de acero inoxidable curvada con mandril.",
+    description: "Diseñamos un escape deportivo con acero inoxidable curvado.",
   },
 ];
 
@@ -60,8 +59,8 @@ export default function OurJobs() {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-6">
-        <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-slate-200/50 dark:border-gray-700/50">
+      <div className="container mx-auto md:px-6">
+        <div className="md:bg-white/90 md:dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-2 md:p-12 md:shadow-xl md:border border-slate-200/50 dark:border-gray-700/50">
           {/* Header */}
           <div className="text-center mb-16 space-y-4">
             <motion.div
@@ -94,8 +93,8 @@ export default function OurJobs() {
                         <Image src={job.image || "/placeholder.svg"} alt={job.title} fill className="object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-8">
-                          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{job.title}</h3>
-                          <p className="text-white/90 leading-relaxed">{job.description}</p>
+                          <h3 className="text-xl md:text-3xl font-bold text-white mb-4">{job.title}</h3>
+                          <p className="text-white/90 leading-relaxed text-sm md:text-base">{job.description}</p>
                         </div>
                       </div>
                     </div>
