@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 interface ServiceCardProps {
   heading: string
@@ -18,7 +19,7 @@ export default function ServiceCard({ heading, description, icon }: ServiceCardP
     >
       <div className="space-y-4">
         <div className="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-400/20 flex items-center justify-center group-hover:bg-orange-200 dark:group-hover:bg-orange-400/30 transition-colors duration-300">
-          <img src={ icon } className="h-8 w-8" alt="" />
+          <img src={icon} className="h-8 w-8" alt="" />
         </div>
 
         <h3 className="text-xl font-semibold text-slate-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-300 transition-colors duration-300">
@@ -27,10 +28,13 @@ export default function ServiceCard({ heading, description, icon }: ServiceCardP
 
         <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{description}</p>
 
-        <div className="flex items-center text-orange-500 dark:text-orange-400 font-medium group-hover:text-orange-600 dark:group-hover:text-orange-300 transition-colors duration-300">
-          <span className="text-sm">Learn more</span>
+        <Link
+          href="/#"
+          className="flex items-center text-orange-500 dark:text-orange-400 font-medium group-hover:text-orange-600 dark:group-hover:text-orange-300 transition-colors duration-300"
+        >
+          <span className="text-sm">Ver Más</span>
           <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-        </div>
+        </Link>
       </div>
     </motion.div>
   )

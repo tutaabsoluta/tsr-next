@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react"
 import Image from "next/image"
 import { motion, useInView } from "framer-motion"
+import { Users } from "lucide-react";
 
 const stats = [
   {
@@ -84,7 +85,8 @@ export default function AboutSection() {
                 transition={{ duration: 0.6 }}
                 className="space-y-6"
               >
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-400/20 text-orange-600 dark:text-orange-300 text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-400/20 text-orange-600 dark:text-orange-300 text-sm font-medium">
+                  <Users />
                   Nosotros
                 </div>
 

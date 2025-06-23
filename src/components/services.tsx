@@ -3,7 +3,7 @@
 import { useRef } from "react"
 import Link from "next/link"
 import { motion, useInView } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Settings, Wrench } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ServiceCard from "@/components/ServiceCard"
 import { services } from '../data/servicesData'
@@ -23,8 +23,9 @@ export default function ServicesPreview() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-400/20 text-orange-600 dark:text-orange-300 text-sm font-medium mb-4">
-                Nuestra Expertiz
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-400/20 text-orange-600 dark:text-orange-300 text-sm font-medium mb-4">
+              <Settings />
+                Servicios
               </div>
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
                 Servicios Especializados
@@ -70,7 +71,6 @@ export default function ServicesPreview() {
               >
                 <Link href="/services">
                   Ver todos los Servicios
-                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button
@@ -79,7 +79,6 @@ export default function ServicesPreview() {
                 size="lg"
                 className="rounded-xl px-8 border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800"
               >
-                <Link href="/contact">Free Quote</Link>
               </Button>
             </div>
           </motion.div>

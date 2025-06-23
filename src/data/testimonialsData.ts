@@ -6,33 +6,33 @@ interface Testimonial {
 }
 
 
-export const testimonials: Testimonial[] = [
+export const testimoniales: Testimonial[] = [
   {
     id: 1,
-    name: "John Smith",
-    title: "Fleet Manager, ABC Logistics",
+    name: "Marcos Lee",
+    title: "Gerente de Mueblería Diamond",
     quote:
-      "The chassis extensions they completed for our delivery trucks were perfect. The quality of workmanship and attention to detail was exceptional, and the project was completed ahead of schedule."
+      "Las extensiones de chasis que realizaron para nuestros camiones de reparto quedaron perfectas. La calidad del trabajo y la atención al detalle fueron excepcionales, y completaron el proyecto antes del plazo acordado."
   },
   {
     id: 2,
-    name: "Sarah Johnson",
-    title: "Owner, Custom Auto Shop",
+    name: "Renato Umaña",
+    title: "Vendedor de Vehiculos",
     quote:
-      "We've been using their laser cleaning services for restoring classic car parts, and the results are amazing. It's so much more precise than traditional methods, and there's no damage to the original metal."
+      "Usamos sus servicios de limpieza láser para restaurar piezas de autos clásicos, y los resultados han sido impresionantes. Es mucho más preciso que los métodos tradicionales y no daña el metal original."
   },
   {
     id: 3,
-    name: "Michael Rodriguez",
-    title: "Project Manager, Industrial Solutions",
+    name: "Leonardo Ballena",
+    title: "Supervisor de Proyecto, Soluciones Industriales",
     quote:
-      "The custom platforms they fabricated for our warehouse have transformed our operations. They understood our requirements perfectly and delivered a solution that exceeded our expectations in both quality and functionality."
+      "Las plataformas que fabricaron mejoraron nuestras operaciones y superaron lo que esperábamos en calidad y funcionalidad."
   },
   {
     id: 4,
-    name: "Emily Chen",
-    title: "Operations Director, Manufacturing Inc.",
+    name: "Víctor Rodríguez",
+    title: "Director de Operaciones, TSR",
     quote:
-      "Their metal fabrication expertise helped us solve a complex production issue. The team was professional, responsive, and delivered exactly what we needed on time and within budget."
-  },
+      "Gracias a su experiencia resolvimos un problema clave en producción. Entregaron justo lo que necesitábamos, a tiempo y sin pasarse del presupuesto."
+  }
 ]

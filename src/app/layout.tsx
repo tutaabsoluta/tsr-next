@@ -3,6 +3,7 @@ import { Lato, Merriweather } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import Navbar from "@/components/navbar";
+import BotonWhatsapp from "@/components/boton-whatsapp";
 
 const lato = Lato({
   variable: "--font-lato",
@@ -39,6 +40,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <BotonWhatsapp />
         </ThemeProvider>
       </body>
     </html>

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState, useRef } from "react"
 import useEmblaCarousel from "embla-carousel-react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, Hammer } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -71,7 +71,8 @@ export default function OurJobs() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-400/20 text-orange-600 dark:text-orange-300 text-sm font-medium mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-400/20 text-orange-600 dark:text-orange-300 text-sm font-medium mb-4">
+              <Hammer />
                 Nuestros Trabajos
               </div>
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">

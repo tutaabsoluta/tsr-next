@@ -1,10 +1,9 @@
 "use client"
 
 import { useRef } from "react"
-import Image from "next/image"
 import { motion, useInView } from "framer-motion"
-import { Quote, Star } from "lucide-react"
-import { testimoniales } from "@/lib/data"
+import { Quote } from "lucide-react"
+import { testimoniales } from "@/data/testimonialsData"
 
 export default function Testimonials() {
   const ref = useRef(null)
@@ -44,7 +43,7 @@ export default function Testimonials() {
             </div>
 
             {/* Bento Grid Layout - Equal Width Columns */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 md:px-12">
               {/* Left Column - Main Testimonial */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -52,14 +51,13 @@ export default function Testimonials() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-slate-50 dark:bg-gray-700 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-gray-600 relative overflow-hidden"
               >
-                <div className="absolute top-6 left-6">
+                <div className="absolute top-4 left-4">
                   <Quote className="h-8 w-8 text-orange-500/20 dark:text-orange-400/20" />
                 </div>
 
                 <div className="mb-8">
-                  <div className="text-4xl font-bold text-orange-500 dark:text-orange-400 mb-2">100%</div>
-                  <div className="text-lg font-semibold text-slate-900 dark:text-white mb-6">
-                    Client Satisfaction Rate
+                  <div className="text-lg font-semibold text-slate-900 dark:text-orange-300 mt-4 mb-8">
+                    Calidad Incomparable
                   </div>
                   <p className="text-lg italic leading-relaxed text-slate-600 dark:text-slate-300">
                     "{mainTestimonial.quote}"
@@ -84,10 +82,9 @@ export default function Testimonials() {
                   className="bg-slate-50 dark:bg-gray-700 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 dark:border-gray-600"
                 >
                   <div className="mb-4">
-                    <div className="text-2xl font-bold text-orange-500 dark:text-orange-400 mb-1">500+</div>
-                    <div className="text-sm font-semibold text-slate-900 dark:text-white mb-3">Projects Completed</div>
+                    <div className="text-sm font-semibold text-slate-900 dark:text-orange-300 mb-3">100% Recomendados</div>
                     <p className="text-sm italic text-slate-600 dark:text-slate-300">
-                      "{sideTestimonials[0]?.quote.substring(0, 80)}..."
+                      "{sideTestimonials[0]?.quote}"
                     </p>
                   </div>
                   <div className="flex items-center">
@@ -109,7 +106,7 @@ export default function Testimonials() {
                     className="bg-slate-50 dark:bg-gray-700 backdrop-blur-sm rounded-2xl p-4 border border-slate-200 dark:border-gray-600"
                   >
                     <p className="text-sm italic text-slate-600 dark:text-slate-300 mb-3">
-                      "{sideTestimonials[1]?.quote.substring(0, 60)}..."
+                      "{sideTestimonials[1]?.quote.substring(0, 100)}..."
                     </p>
                     <div className="flex items-center">
 
@@ -129,7 +126,7 @@ export default function Testimonials() {
                     className="bg-orange-100 dark:bg-orange-400/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-200 dark:border-orange-400/30"
                   >
                     <p className="text-sm italic text-slate-600 dark:text-slate-300 mb-3">
-                      "{sideTestimonials[2]?.quote.substring(0, 60)}..."
+                      "{sideTestimonials[2]?.quote.substring(0, 100)}..."
                     </p>
                     <div className="flex items-center">
                       <div>
@@ -143,32 +140,6 @@ export default function Testimonials() {
                 </div>
               </div>
             </div>
-
-            {/* Bottom Stats Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-slate-200 dark:border-gray-600"
-            >
-              <div className="flex items-center mb-4 sm:mb-0">
-                <div className="flex items-center mr-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 fill-orange-400 dark:fill-orange-300 text-orange-400 dark:text-orange-300"
-                    />
-                  ))}
-                  <span className="ml-2 font-semibold text-slate-900 dark:text-white">4.9</span>
-                </div>
-                <div className="text-sm text-slate-600 dark:text-slate-300">
-                  <span className="font-semibold text-slate-900 dark:text-white">200+</span> satisfied clients
-                </div>
-              </div>
-              <button className="text-sm font-medium text-orange-500 dark:text-orange-400 hover:text-orange-600 dark:hover:text-orange-300 transition-colors">
-                View all reviews →
-              </button>
-            </motion.div>
           </motion.div>
         </div>
       </div>

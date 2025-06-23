@@ -28,11 +28,13 @@ export default function Navbar() {
   }, [])
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled
-        ? "bg-background/80 backdrop-blur-xl shadow-xl border-b border-border/50 py-2"
-        : "bg-transparent py-4"
-    }`}>
+<header
+  className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-500 ${
+    isScrolled
+      ? "bg-background/80 backdrop-blur-xl shadow-xl border-orange-300/80 py-2"
+      : "bg-transparent border-transparent py-4"
+  }`}
+>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -83,13 +85,7 @@ export default function Navbar() {
 
               <div className="flex items-center space-x-4">
                 <ManualThemeToggle />
-                <Button
-                  asChild
-                  size="lg"
-                  className="rounded-full px-8 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <Link href="/contact">Get a Quote</Link>
-                </Button>
+
               </div>
             </div>
           )}
@@ -103,7 +99,7 @@ export default function Navbar() {
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.4 }}
-          className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border/50"
+          className="md:hidden bg-background/95 backdrop-blur-xl border-t border-metallic-weldingOrange/50"
         >
           <div className="container mx-auto px-4 py-6">
             {navItems.map((item, index) => {
@@ -126,11 +122,6 @@ export default function Navbar() {
                 </motion.div>
               )
             })}
-            <Button asChild className="mt-4 w-full bg-gradient-to-r from-orange-500 to-red-500">
-              <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
-                Get a Quote
-              </Link>
-            </Button>
           </div>
         </motion.div>
       )}
