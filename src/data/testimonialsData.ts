@@ -23,7 +23,7 @@ export const testimoniales: Testimonial[] = [
   },
   {
     id: 3,
-    name: "Leonardo Ballena",
+    name: "Leonardo Petunia",
     title: "Supervisor de Proyecto, Soluciones Industriales",
     quote:
       `"Las plataformas que fabricaron mejoraron nuestras operaciones y superaron lo que esperábamos en calidad y funcionalidad."`

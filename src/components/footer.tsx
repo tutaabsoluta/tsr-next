@@ -1,8 +1,7 @@
-import Link from "next/link"
-import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react"
+import Link from "next/link";
+import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
-
   const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,134 +13,119 @@ export default function Footer() {
     </svg>
   );
 
+  const socialLinks = [
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/p/Taller-de-Soldadura-Rodr%C3%ADguez-Ltda-100057187370330/?locale=es_LA",
+      label: "Facebook",
+    },
+    {
+      icon: Instagram,
+      href: "https://instagram.com/taller_s_r",
+      label: "Instagram",
+    },
+    {
+      icon: TikTokIcon,
+      href: "https://tiktok.com/@taller.de.soldadu6",
+      label: "TikTok",
+    },
+  ];
+
+  const quickLinks = [
+    { label: "Inicio", href: "/" },
+    { label: "Servicios", href: "/services" },
+    { label: "Galería", href: "/gallery" },
+    { label: "Sobre Nosotros", href: "/about" },
+    { label: "Contacto", href: "/contact" },
+  ];
+
   return (
-    <footer className="py-16 ">
-      <div className="container mx-auto px-6">
-        <div className="md:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-4 md:p-12 md:shadow-xl md:border border-gray-700/50">
-          {/* Contenido principal del footer */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {/* Información de la empresa */}
-            <div className="lg:col-span-2 space-y-6">
-              <Link href="/" className="inline-block group">
-                <img src="logo2.png" alt="Logo de Empresa" className="w-full h-16" />
-              </Link>
+    <footer className="bg-[#22262F] text-white px-6 md:px-12 pt-12 pb-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
 
-              <p className="text-slate-300 leading-relaxed max-w-md">
-                Servicios profesionales de soldadura y fabricación metálica con tecnología avanzada de limpieza láser. Calidad artesanal en cada proyecto.
-              </p>
-
-              {/* Lista de contacto */}
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-orange-400 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-sm font-medium text-white">San Rafael, Vazquez Coronado</p>
-                    <p className="text-sm text-slate-300">San José, Costa Rica</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-orange-400 flex-shrink-0" />
-                  <Link
-                    href="tel:+50622290887"
-                    className="text-sm font-medium text-white hover:text-orange-400 transition-colors"
-                  >
-                    +506 2229 0887
-                  </Link>
-                </div>
-
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-orange-400 flex-shrink-0" />
-                  <Link
-                    href="mailto:info@weldingworkshop.com"
-                    className="text-sm font-medium text-white hover:text-orange-400 transition-colors"
-                  >
-                    t_rodriguezltda@hotmail.com
-                  </Link>
+        {/* Contacto y ubicación */}
+        <div className="space-y-8">
+          <div>
+            <h3 className="text-base font-semibold mb-4">Contacto</h3>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-metallic-electricBlue" />
+                <Link
+                  href="tel:+50622290887"
+                  className="text-sm text-slate-400 hover:text-metallic-electricBlue transition-colors"
+                >
+                  +506 2229 0887
+                </Link>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-metallic-electricBlue" />
+                <Link
+                  href="mailto:t_rodriguezltda@hotmail.com"
+                  className="text-sm text-slate-400 hover:text-metallic-electricBlue transition-colors"
+                >
+                  t_rodriguezltda@hotmail.com
+                </Link>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="h-5 w-5 text-metallic-electricBlue mt-0.5" />
+                <div>
+                  <p className="text-sm text-slate-400">San Rafael, Vázquez de Coronado</p>
+                  <p className="text-sm text-slate-400">San José, Costa Rica</p>
                 </div>
               </div>
-            </div>
-
-            {/* Enlaces rápidos */}
-            <div className="space-y-6">
-              <h3 className="text-lg font-semibold text-white">Enlaces Rápidos</h3>
-              <ul className="space-y-3">
-                {[
-                  { label: "Inicio", href: "/" },
-                  { label: "Servicios", href: "/services" },
-                  { label: "Galería", href: "/gallery" },
-                  { label: "Sobre Nosotros", href: "/about" },
-                  { label: "Contacto", href: "/contact" },
-                  { label: "Preguntas Frecuentes", href: "/faq" },
-                ].map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-slate-300 hover:text-orange-400 transition-colors duration-300 text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Servicios */}
-            <div className="space-y-6">
-              <h3 className="text-lg font-semibold text-white">Nuestros Servicios</h3>
-              <ul className="space-y-3">
-                {[
-                  "Limpieza Láser",
-                  "Extensión de Chasis",
-                  "Soldadura Personalizada",
-                  "Sistemas de Escape",
-                  "Fabricación Metálica",
-                  "Plataformas Personalizadas",
-                ].map((service) => (
-                  <li key={service}>
-                    <Link
-                      href="/services"
-                      className="text-slate-300 hover:text-orange-400 transition-colors duration-300 text-sm"
-                    >
-                      {service}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
 
-          {/* Sección inferior */}
-          <div className="pt-8 border-t border-gray-600">
-            <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-              {/* Derechos de autor */}
-              <p className="text-slate-400 text-sm">
-                © {new Date().getFullYear()} Taller de Soldadura Rodriguez. Todos los derechos reservados.
-              </p>
+          <div>
 
-              {/* Redes sociales */}
-              <div className="flex items-center space-x-3">
-                {[
-                  { icon: Facebook, href: "https://www.facebook.com/p/Taller-de-Soldadura-Rodr%C3%ADguez-Ltda-100057187370330/?locale=es_LA", label: "Facebook" },
-                  { icon: Instagram, href: "https://instagram.com/taller_s_r", label: "Instagram" },
-                  { icon: TikTokIcon, href: "https://tiktok.com/@taller.de.soldadu6", label: "Twitter" },
-                ].map(({ icon: Icon, href, label }) => (
-                  <Link
-                    key={label}
-                    href={href}
-                    className="transition-all duration-300 group"
-                    aria-label={label}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon className="h-5 w-5 text-slate-300 group-hover:text-orange-400 transition-colors duration-300" />
-                  </Link>
-                ))}
-              </div>
-            </div>
+          </div>
+        </div>
+
+        {/* Enlaces rápidos */}
+        <div>
+          <h3 className="text-base font-semibold mb-4">Enlaces Rápidos</h3>
+          <ul className="space-y-3">
+            {quickLinks.map(({ label, href }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className="text-slate-400 text-sm hover:text-metallic-electricBlue transition-colors"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Info empresa */}
+        <div>
+          <h3 className="text-base font-semibold mb-4">Más acerca de nosotros</h3>
+          <p className="text-slate-400 text-sm max-w-sm mb-6">
+            Somos un taller de soldadura comprometido con la calidad y la satisfacción del cliente, ofreciendo soluciones personalizadas para empresas y particulares.
+          </p>
+
+          <div className="flex items-center gap-4">
+            {socialLinks.map(({ icon: Icon, href, label }) => (
+              <Link
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="bg-[#22262F] outline outline-1 outline-slate-600 text-slate-200 rounded-full p-2 hover:text-metallic-electricBlue transition-colors"
+              >
+                <Icon className="h-5 w-5" />
+              </Link>
+            ))}
           </div>
         </div>
       </div>
+
+      {/* Footer base */}
+      <div className="mt-12 border-t border-slate-700 pt-6 text-center text-sm text-slate-300">
+        © {new Date().getFullYear()} Taller de Soldadura Rodríguez. Todos los derechos reservados.
+      </div>
     </footer>
-  )
+  );
 }

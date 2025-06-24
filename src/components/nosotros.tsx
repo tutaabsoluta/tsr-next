@@ -74,7 +74,7 @@ export default function AboutSection() {
   return (
     <section className="py-16">
       <div className="container mx-auto md:px-6">
-        <div className="md:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-4 md:p-12 md:shadow-xl md:border border-gray-700/50">
+        <div className="p-4 md:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div className="space-y-8">
@@ -85,16 +85,16 @@ export default function AboutSection() {
                 transition={{ duration: 0.6 }}
                 className="space-y-6"
               >
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-400/20 text-orange-300 text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-metallic-arcBlue/20 text-metallic-blue text-sm font-bold mb-4">
                   <Users />
                   Nosotros
                 </div>
 
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-700 leading-tight">
                   Quienes Somos
                 </h2>
 
-                <p className="text-slate-300 text-lg leading-relaxed">
+                <p className="text-slate-500 text-lg leading-relaxed">
                   Fundado con una pasión por el trabajo metálico de precisión, nuestro taller ha crecido desde sus inicios humildes hasta convertirse en un nombre de confianza en servicios de soldadura y fabricación.
                 </p>
               </motion.div>
@@ -110,15 +110,15 @@ export default function AboutSection() {
                     className="space-y-2"
                   >
                     <div className="flex items-baseline space-x-1">
-                      <span className="text-3xl md:text-4xl font-bold text-orange-300">
+                      <span className="text-3xl md:text-4xl font-bold text-metallic-arcBlue">
                         {counts[index]}
                       </span>
-                      <span className="text-2xl md:text-3xl font-bold text-orange-300">
+                      <span className="text-2xl md:text-3xl font-bold text-metallic-arcBlue">
                         {stat.suffix}
                       </span>
                     </div>
-                    <h3 className="font-semibold text-white text-sm md:text-base">{stat.label}</h3>
-                    <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
+                    <h3 className="font-semibold text-slate-500 text-sm md:text-base">{stat.label}</h3>
+                    <p className="text-xs md:text-sm text-slate-400 leading-relaxed">
                       {stat.description}
                     </p>
                   </motion.div>

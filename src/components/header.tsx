@@ -1,97 +1,98 @@
 'use client'
 
-
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowDown } from "lucide-react"
 
-
-
 export default function HeaderSection() {
-
-
     return (
-        <>
+        <section className="min-h-screen overflow-hidden relative">
+            {/* Imagen de fondo */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="header.jpg"
+                    alt="Soldadura de fondo"
+                    className="w-full h-full object-cover"
+                />
+                {/* Capa oscura */}
+                <div className="absolute inset-0 bg-black/60"></div>
+            </div>
 
-            {/* Industrial Typography Hero Section */}
-            <section className=" min-h-screen overflow-hidden ">
-                {/* Industrial SVG Background Shapes */}
-
-
-                {/* Content using your template structure */}
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="min-h-screen flex items-center justify-center gap-32">
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="z-10 space-y-4 md:mt-32"
-                        >
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.3 }}
-                                className="uppercase text-slate-400 text-sm font-bold tracking-wider"
-                            >
-                                Somos Taller de Soldadura Rodriguez
-                            </motion.p>
-
-                            <motion.h1
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.4 }}
-                                className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-slate-100 leading-none"
-                            >
-                                Confianza y calidad{" "}
-                                <span className="text-metallic-weldingOrange">
-                                    en cada punto de soldadura
-                                </span>
-                            </motion.h1>
-
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.6 }}
-                                className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-3xl"
-                            >
-                                Solucionamos problemas críticos de soldadura con servicios hechos a medida: limpieza láser, reparación
-                                de piezas y <br className="hidden md:block" />
-                                fabricación de componentes personalizados
-                            </motion.p>
-
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.8 }}
-                                className="pt-4"
-                            >
-                                <button
-                                    className="outline outline-1 outline-metallic-weldingOrange px-8 py-2 rounded-xl bg-orange-300/10 hover:bg-orange-300/30 duration-300 transition-all ease-out"
-                                >
-                                    <Link href="/contact">Comunicate con nosotros</Link>
-                                </button>
-                            </motion.div>
-                        </motion.div>
-                    </div>
-                </div>
-
-                {/* Scroll Indicator */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 1 }}
-                    className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-                >
+            {/* Contenido principal */}
+            <div className="relative z-10 container mx-auto px-4 md:px-6">
+                <div className="min-h-screen flex items-center justify-center">
                     <motion.div
-                        animate={{ y: [0, 10, 0] }}
-                        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-                        className="flex flex-col items-center space-y-2 text-slate-400"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="space-y-6 text-center text-white"
                     >
-                        <span className="text-sm uppercase tracking-wider">Explorar</span>
-                        <ArrowDown className="h-5 w-5" />
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                            className="uppercase text-sm font-bold tracking-wider text-slate-300"
+                        >
+                            Somos Taller de Soldadura Rodríguez
+                        </motion.p>
+
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight"
+                        >
+                            Cada chispa cuenta.{" "}
+                            <span className="text-metallic-electricBlue">
+                                Cada unión perdura.
+                            </span>
+                        </motion.h1>
+
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                            className="text-slate-200 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto"
+                        >
+                            Especialistas en limpieza láser, reparación de piezas y fabricación de componentes únicos para la industria y el taller.
+                        </motion.p>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.8 }}
+                            className="pt-4 flex justify-center"
+                        >
+                            <Link href="/contact">
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    className="outline outline-1 outline-metallic-electricBlue bg-metallic-vividBlue/20 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                                >
+                                    Contactanos hoy
+                                </motion.button>
+                            </Link>
+                        </motion.div>
                     </motion.div>
+                </div>
+            </div>
+
+            {/* Scroll Indicator */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 1 }}
+                className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+            >
+                <motion.div
+                    animate={{ y: [0, 10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    className="flex flex-col items-center space-y-2 text-slate-300"
+                >
+                    <span className="text-sm uppercase tracking-wider">Explorar</span>
+                    <ArrowDown className="h-5 w-5" />
                 </motion.div>
-            </section>
-        </>
+            </motion.div>
+        </section>
     )
 }

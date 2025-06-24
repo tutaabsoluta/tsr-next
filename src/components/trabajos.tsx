@@ -58,25 +58,25 @@ export default function OurJobs() {
   }, [emblaApi])
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-[#E7EEF7]">
       <div className="container mx-auto md:px-6">
-        <div className="md:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-2 md:p-12 md:shadow-xl md:borderborder-gray-700/50">
+        <div className="p-2 md:p-12">
           {/* Header */}
-          <div className="text-center mb-16 space-y-4">
+          <div className="mb-16 space-y-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-400/20 text-orange-300 text-sm font-medium mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-metallic-arcBlue/20 text-metallic-blue text-sm font-bold mb-4">
               <Hammer />
                 Nuestros Trabajos
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-700 mb-6">
                 Proyectos Destacados
               </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-slate-500 max-w-3xl leading-relaxed">
                 Conocé nuestros proyectos de soldadura y reparación, reflejo de nuestro compromiso con la calidad, la precisión y el servicio personalizado.
               </p>
             </motion.div>
@@ -112,7 +112,7 @@ export default function OurJobs() {
                   onClick={scrollPrev}
                   className="rounded-xl border-gray-600"
                 >
-                  <ChevronLeft className="h-4 w-4" />
+                  <ChevronLeft className="h-4 w-4 text-black" />
                 </Button>
                 <Button
                   variant="outline"
@@ -120,7 +120,7 @@ export default function OurJobs() {
                   onClick={scrollNext}
                   className="rounded-xl border-gray-600"
                 >
-                  <ChevronRight className="h-4 w-4" />
+                  <ChevronRight className="h-4 w-4 text-black" />
                 </Button>
               </div>
 
@@ -130,7 +130,7 @@ export default function OurJobs() {
                     key={index}
                     onClick={() => scrollTo(index)}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === selectedIndex ? "bg-orange-400 w-8" : "bg-gray-600"
+                      index === selectedIndex ? "bg-metallic-vividBlue w-8" : "bg-gray-600"
                     }`}
                   />
                 ))}

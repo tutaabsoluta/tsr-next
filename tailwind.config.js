@@ -29,10 +29,10 @@ module.exports = {
           "text": "#E2E8F0"  // Texto claro
         },
         "metallic": {
-          "blueSteel": "#0A1A2F",
-          "weldingOrange": "#FF7D33",
-          "ironGray": "#3A4556",
-          "sparkGold": "#22d3ee",  // Opcional: tono dorado para detalles
+          "electricBlue": "#00FFFF",
+          "vividBlue": "#00BFFF",
+          "arcBlue": "#00BFFF",
+          "blue": "#007FFF",  // Opcional: tono dorado para detalles
           "patina": "#4D9078"  // Opcional: verde pátina para acentos
         }
       },
