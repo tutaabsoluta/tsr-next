@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
-import { Menu, X, Home, Wrench, ImageIcon, User, Phone, ArrowDown } from "lucide-react"
+import { Menu, X, Home, Wrench, ImageIcon, User, Phone } from "lucide-react"
 import { useMobile } from "@/hooks/useMobile"
 
 const navItems = [
