@@ -43,7 +43,7 @@ export default function HeaderSection() {
                             className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight"
                         >
                             Cada chispa cuenta.{" "}
-                            <span className="text-metallic-electricBlue">
+                         <br/>   <span className="text-metallic-electricBlue">
                                 Cada unión perdura.
                             </span>
                         </motion.h1>
